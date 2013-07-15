@@ -1,5 +1,4 @@
 \documentclass{article}
-\usepackage{Garamond}
 \usepackage{xltxtra}
 \usepackage{eledmac,eledpar}
     \maxchunks{100}
@@ -11,6 +10,24 @@
 \usepackage[french,english]{babel}
 \usepackage{endnotes}
 \usepackage{hyperref}
+\hypersetup{%
+pdftitle={Les indes galantes},%
+pdfauthor={Louis Fuzelier},%
+bookmarksopen={true},%
+pdfdisplaydoctitle={true},%
+pdfpagemode={UseOutlines},%
+pdfcreator={translated and typeset by James M. Clawson},
+pdfsubject={Non-western love, represented by 18th-century French understandings.},%
+pdfkeywords={{noble savage}, love, french, world, opera}}
+
+% To use nice (but not-free) fonts
+\usepackage{fontspec} 
+\usepackage{xunicode}
+\defaultfontfeatures{Scale=MatchLowercase ,Mapping=tex-text}
+\setromanfont[Numbers=OldStyle]{Adobe Garamond Pro}
+\setsansfont{Futura Medium Italic}
+\setmonofont{Futura Condensed Medium}
+
 
 \chapterfont{\color{WildStrawberry}}
 \allsectionsfont{\color{WildStrawberry}\sffamily}
@@ -56,7 +73,7 @@
 
 
 \title{Les indes galantes \\ (The Gallant Indies)}
-\author{Music by Jean-Philippe Rameau \\ Libretto by Louis Fuzelier \\ Translated by James Clawson}
+\author{Music by Jean-Philippe Rameau \\ Libretto by Louis Fuzelier \\ \url{http://github.com/jmclawson/les-indes-galantes}}
 \date{1735}
 
 \begin{document} 
