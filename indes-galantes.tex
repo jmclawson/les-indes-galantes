@@ -28,6 +28,8 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \setsansfont{Futura Medium Italic}
 \setmonofont{Futura Condensed Medium}
 
+\usepackage{fancyhdr}
+
 
 \chapterfont{\color{WildStrawberry}}
 \allsectionsfont{\color{WildStrawberry}\sffamily}
@@ -76,8 +78,21 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \author{Music by Jean-Philippe Rameau \\ Libretto by Louis Fuzelier \\ \url{http://github.com/jmclawson/les-indes-galantes}}
 \date{1735}
 
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\rhead{\spotcolr{#1}}{}}
+% \rhead{\bfseries Les indes galantes}
+\renewcommand{\headrulewidth}{0pt}
+% \fancyheadoffset{\marginparsep+\marginparwidth}
+\addtolength{\headwidth}{\marginparsep}
+\addtolength{\headwidth}{\marginparsep}
+\addtolength{\headwidth}{\marginparsep}
+% \addtolength{\headwidth}{\marginparwidth}
+
 \begin{document} 
 \maketitle{}
+
+\thispagestyle{plain}
+
 
 \setstanzaindents{1,0,0}
 \setcounter{stanzaindentsrepetition}{2}
@@ -149,9 +164,9 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 % \makeatother
 
 
-\section*{Prologue}
+\section*{Prologue}\rhead{\spotcolr{Prologue}}\thispagestyle{plain}
 \addcontentsline{toc}{section}{Prologue}
-\addtoendnotes{\protect\addcontentsline{toc}{section}{Notes}}
+\addtoendnotes{\protect\addcontentsline{toc}{section}{Notes}\protect\rhead{\spotcolr{Notes}}\protect\lhead{}\protect\thispagestyle{plain}}
 \addtoendnotes{\protect\subsection*{Prologue}}
 \addtoendnotes{\protect\addcontentsline{toc}{subsection}{Prologue}}
 
@@ -223,7 +238,7 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 		Come, gather together, rush to my voice! &
 		You sing as soon as dawn &
 		Brightens this beautiful abode: &
-		You begin with the day &
+		At daybreak you begin&
 		The brilliant games of Terpsichore;\mynote{terpsichore}{8}{One of the nine muses, Terpsichore is responsible for dance and choral singing.} &
 		The sweet moments that Cupid\mynote{cupid}{9}{The name used in the original French, ``L'Amour,'' is ambiguous. Literally, his name means ``Love,'' so he is a personification of the idea, but he later appears accompanied ``d'une troupe d'Amours'' `by a troup of loves,' and they are all armed with darts, or arrows. The closest English approximation to this god, then, is \emph{Cupid}, the Roman equivalent of the Greek \emph{Eros}, more typically known in French as \emph{Cupidon} and \emph{\'{E}ros}, respectively. Cupid is commonly accompanied by \emph{amorini} or ``cupids,'' depicted as chubby winged babies called \emph{putti}. Fuzelier's choice of naming him L'Amour over the more expected Cupidon is a choice that narrows the distance between the individual and what he represents.} gives you &
 		Are dearer still to you.
@@ -283,7 +298,7 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 		Sing your happiness, &
 		But without disturbing the mysterious! &
 		For the tenderhearted, &
-		There are things whose secrecy increases their sweetness. &
+		There are things made sweeter by secrecy. &
 		Consider that which is best left unsaid!
     \& 
     \endnumbering
@@ -633,7 +648,7 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 		\stage{to Cupid} &
 		In order to change the hearts charmed by Bellona, &
 		Son of Venus, launch your darts with certainty; &
-		Shepherd the pleasures of distant lands, &
+		Tend to the pleasures in distant lands, &
 		Since Europe abandons them!
     \& 
     \endnumbering
@@ -743,7 +758,7 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 
 \newpage
 
-\section*{Act 2. Les Incas du P\'{e}rou (The Incas of Peru)}
+\section*{Act 2. Les Incas du P\'{e}rou (The Incas of Peru)}\rhead{\spotcolr{Act 2}}\thispagestyle{plain}
 \addcontentsline{toc}{section}{Act 2. Les Incas du P\'{e}rou}
 \addtoendnotes{\protect\subsection*{Act 2.}}
 \addtoendnotes{\protect\addcontentsline{toc}{subsection}{Act 2.}}
@@ -828,7 +843,7 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \begin{Rightside}
 	\setline{7}
 	\stanza
-		How evilly you penetrate my hidden shame! &
+		How poorly you comprehend my secret shame! &
 		What unjust suspicion! \ldots{}What, without concern,&
 		Do we loosen at one time &
 		Both ties of blood and of laws? &
@@ -873,7 +888,7 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \begin{Rightside}
 	\setline{13}
 	\stanza
-		Do not believe, Carlos, that my reason is balanced!&
+		Do not believe, Carlos, that my judgment wavers!&
 		But I fear violence from our proud Incas\ldots{}
     \& 
     \endnumbering
@@ -2266,7 +2281,7 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 
 \newpage
 
-\section*{Act 4.~Les sauvages (The American Indians)}
+\section*{Act 4.~Les sauvages (The American Indians)}\rhead{\spotcolr{Act 4}}\thispagestyle{plain}
 \addcontentsline{toc}{section}{Act 4.~Les sauvages}
 \addtoendnotes{\protect\subsection*{Act 4.}}
 \addtoendnotes{\protect\addcontentsline{toc}{subsection}{Act 4.}}
