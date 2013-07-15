@@ -1,0 +1,3473 @@
+\documentclass{article}
+\usepackage{Garamond}
+\usepackage{xltxtra}
+\usepackage{eledmac,eledpar}
+    \maxchunks{100}
+    \def\endstanzaextra{\pstart\strut\skipnumbering\pend}
+	\renewcommand{\Rlineflag}{}
+\usepackage{fullpage}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{sectsty}
+\usepackage[french,english]{babel}
+\usepackage{endnotes}
+\usepackage{hyperref}
+
+\chapterfont{\color{WildStrawberry}}
+\allsectionsfont{\color{WildStrawberry}\sffamily}
+
+\newcommand{\dialogue}[1]{%
+\filbreak\begin{center}
+	\textbf{\textsc{#1}}
+\end{center}\nopagebreak}
+
+\newcommand{\song}[1]{%
+\begin{center}
+	\textbf{\textit{(#1)}}
+\end{center}}
+
+\newcommand{\songfoot}[2]{%
+\begin{center}
+	\textbf{\textit{(#1)\footnote{#2}}}
+\end{center}}
+
+\newcommand{\stage}[1]{\hfill\emph{(#1)}\hfill}
+% \newcommand{\scene}[1]{\hfill\emph{#1}\hfill}
+\newcommand{\stagel}[1]{\emph{(#1)}}
+\newcommand{\stager}[1]{\hfill\emph{(#1)}}
+\newcommand{\scenel}[1]{\emph{#1}\hfill}
+\newcommand{\scene}[1]{\emph{#1}\hfill}
+
+\renewcommand{\numlabfont}{\color{WildStrawberry}\sffamily\scriptsize}
+% \renewcommand{\numlabfont}{\color{WildStrawberry}\normalfont\scriptsize}
+
+\newcommand{\spotcolr}[1]{{\color{WildStrawberry}#1}}
+
+% \newcommand{\mynote}[3]{\label{#1}\addtoendnotes{\hyperref[#1]{\spotcolr{line #2}} #3\newline}}
+
+\makeatletter
+ \newcommand{\nop}[1]{\Hy@raisedlink{\hypertarget{#1}{}}}
+\makeatother
+\newcommand{\mytarget}[1]{\nop{#1}{}}
+\newcommand{\myendnote}[3]{\addtoendnotes{\protect\hyperlink{#1}{\spotcolr{line #2}}: #3\newline}}
+\newcommand{\mynote}[3]{\mytarget{#1}\myendnote{#1}{#2}{#3}}
+
+\newcommand{\myballetnote}[3]{\addtoendnotes{\protect\hyperlink{#1}{\spotcolr{#2}}: #3\newline}}
+\newcommand{\balletnum}[3]{\song{#2}\mytarget{#1}\myballetnote{#1}{#2}{#3}}
+
+
+\title{Les indes galantes \\ (The Gallant Indies)}
+\author{Music by Jean-Philippe Rameau \\ Libretto by Louis Fuzelier \\ Translated by James Clawson}
+\date{1735}
+
+\begin{document} 
+\maketitle{}
+
+\setstanzaindents{1,0,0}
+\setcounter{stanzaindentsrepetition}{2}
+\setlength{\Lcolwidth}{0.46\textwidth} 
+\setlength{\Rcolwidth}{\Lcolwidth}
+
+% \newcounter{mynextline}
+% \setcounter{mynextline}{9}
+
+\newcommand*{\ssstart}{\firstlinenum{5}\linenumincrement{5}\beginnumbering}
+% \newcommand*{\ssstart}{\firstlinenum{1}\linenumincrement{1}\beginnumbering}
+% \newcommand*{\bsstart}{\firstlinenum{5}\linenumincrement{5}\beginnumbering}
+
+\renewcommand*{\Leftsidehook}{\selectlanguage{french}\ssstart}
+% \renewcommand*{\Leftsidehookend}{\endnumbering}
+% \renewcommand*{\Leftsidehookend}{\setcounter{mynextline}{\value{line}}\stepcounter{mynextline}}
+\renewcommand*{\Rightsidehook}{\selectlanguage{english}\ssstart}
+% \newcommand*{\Rightsidehookend}{\Leftsidehookend}
+
+% \makeatletter
+% \global\c@mynextline 9\relax
+% \renewcommand*{\@l@reg}{%
+%   \ifx\l@dchset@num\relax \else
+%     \advance\absline@num \@ne
+%     \set@line@action
+%     \let\l@dchset@num=\relax
+%     \advance\absline@num \m@ne
+%     \advance\line@num \m@ne
+%   \fi
+%   \advance\absline@num \@ne
+%          \ifx\next@page@num\relax \else
+%              \page@action
+%              \let\next@page@num=\relax
+%          \fi
+%          \ifx\sub@change\relax \else
+%             \ifnum\sub@change>\z@
+%                \sublines@true
+%             \else
+%                \sublines@false
+%             \fi
+%             \sub@action
+%             \let\sub@change=\relax
+%          \fi
+%          \ifcase\@lock
+%             \or
+%                \@lock \tw@
+%             \or \or
+%                \@lock \z@
+%          \fi
+%          \ifcase\sub@lock
+%             \or
+%                \sub@lock \tw@
+%             \or \or
+%                \sub@lock \z@
+%          \fi
+%          \ifsublines@
+%               \ifnum\sub@lock<\tw@
+%                 \advance\subline@num \@ne
+%               \fi
+%          \else
+%               \ifnum\@lock<\tw@
+%                 \advance\line@num \@ne \subline@num \z@
+% 				% \c@mynextline \absline@num\relax
+% 				\advance\c@mynextline \absline@num\relax
+%               \fi
+%          \fi}
+% \makeatother
+
+
+\section*{Prologue}
+\addcontentsline{toc}{section}{Prologue}
+\addtoendnotes{\protect\addcontentsline{toc}{section}{Notes}}
+\addtoendnotes{\protect\subsection*{Prologue}}
+\addtoendnotes{\protect\addcontentsline{toc}{subsection}{Prologue}}
+
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{1}
+	\stanza
+		\scene{Le th\'{e}\^{a}tre repr\'{e}sente le palais d'H\'{e}b\'{e} dans le fond, et ses jardins dans les ailes.}
+    \& 
+    % \setcounter{mynextline}{\value{line}}
+	\endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{1}
+	\stanza
+		\scene{The stage depicts the palace of Hebe\mynote{hebe}{1}{Hebe is the Greek goddess of youthfulness.} in the background and her gardens in the foreground.}
+    \& 
+    \endnumbering%\endnotetext[1]{Hebe is the Greek goddess of youthfulness.}
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\song{Overture}
+
+\subsection*{Sc\`{e}ne 1}
+\addcontentsline{toc}{subsection}{Sc\`{e}ne 1}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{2}
+	\stanza
+		\scene{H\'{e}b\'{e}}
+    \& 
+    % \setcounter{mynextline}{\value{line}}
+	\endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{2}
+	\stanza
+		\scene{Hebe}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{H\'{e}b\'{e}}
+\begin{pairs}
+\begin{Leftside}
+	\setline{3}
+	\stanza
+		Vous, qui d'H\'{e}b\'{e} suivez les lois, &
+		Venez, rassemblez-vous, accourez \`{a} ma voix! &
+		Vous chantez d\`{e}s que l'aurore &
+		\'{E}claire ce beau s\'{e}jour: &
+		Vous commencez avec le jour &
+		Les jeux brillants de Terpsichore; &
+		Les doux instants que vous donne l'Amour &
+		Vous sont plus chers encore.
+    % \setcounter{mynextline}{\value{line}}
+	\& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{3}
+	\stanza
+		You who follow the laws of Hebe, &
+		Come, gather together, rush to my voice! &
+		You sing as soon as dawn &
+		Brightens this beautiful abode: &
+		You begin with the day &
+		The brilliant games of Terpsichore;\mynote{terpsichore}{8}{One of the nine muses, Terpsichore is responsible for dance and choral singing.} &
+		The sweet moments that Cupid\mynote{cupid}{9}{The name used in the original French, ``L'Amour,'' is ambiguous. Literally, his name means ``Love,'' so he is a personification of the idea, but he later appears accompanied ``d'une troupe d'Amours'' `by a troup of loves,' and they are all armed with darts, or arrows. The closest English approximation to this god, then, is \emph{Cupid}, the Roman equivalent of the Greek \emph{Eros}, more typically known in French as \emph{Cupidon} and \emph{\'{E}ros}, respectively. Cupid is commonly accompanied by \emph{amorini} or ``cupids,'' depicted as chubby winged babies called \emph{putti}. Fuzelier's choice of naming him L'Amour over the more expected Cupidon is a choice that narrows the distance between the individual and what he represents.} gives you &
+		Are dearer still to you.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\subsection*{Sc\`{e}ne 2}
+\addcontentsline{toc}{subsection}{Sc\`{e}ne 2}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{11}
+	% \setline{\value{mynextline}}
+	\stanza
+		\scene{\textsc{Entr\'{e}e des 4 nations}. Troupe de jeunesse fran\c{c}aise, espagnole, italienne et polonaise, qui accourt et forme des danses gracieuses.}%\arabic{linenum}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{11}
+	% \setline{\value{mynextline}}
+	\stanza
+		\scene{\textsc{Entry of the four nations}. Troop of French, Spanish, Italian, and Polish youth. They run to create graceful dances.}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+% \newpage
+
+\dialogue{H\'{e}b\'{e}}
+\begin{pairs}
+\begin{Leftside}
+	% \setline{\value{mynextline}}
+	\setline{12}
+	\stanza
+		Amants s\^{u}rs de plaire, &
+		Suivez votre ardeur! &
+		Chantez votre bonheur, &
+		Mais sans offenser le myst\`{e}re! &
+		Il est pour un tendre coeur &
+		Des biens dont le secret augmente la douceur. &
+		Songez qu'il faut les taire!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	% \setline{\value{mynextline}}
+	\setline{12}
+	\stanza
+		Lovers sure of pleasing, &
+		Follow your passion! &
+		Sing your happiness, &
+		But without disturbing the mysterious! &
+		For the tenderhearted, &
+		There are things whose secrecy increases their sweetness. &
+		Consider that which is best left unsaid!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\balletnum{airgrave}{Air grave pour deux polonais}{Serious air for two Polish youths}
+
+\balletnum{firstmin}{1$^{er}$ Menuet}{First minuet}
+
+\balletnum{secmin}{2$^e$ Menuet}{Second minuet}
+
+\dialogue{H\'{e}b\'{e}}
+\begin{pairs}
+\begin{Leftside}
+	\setline{19}
+	\stanza
+		Musettes, r\'{e}sonnez dans ce riant bocage, &
+		Accordez-vous sous l'ombrage &
+		Au murmure des ruisseaux, &
+		Accompagnez le doux ramage &
+		Des tendres oiseaux.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{19}
+	\stanza
+		Bagpipes, resound in this laughing grove. &
+		In this shade, tune yourself &
+		To the murmur of streams. &
+		Join in the sweet warbling &
+		Of tender birds.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Choeur}
+\begin{pairs}
+\begin{Leftside}
+	\setline{24}
+	\stanza
+		Musettes, r\'{e}sonnez dans ce riant bocage, &
+		Accordez-vous sous l'ombrage &
+		Au murmure des ruisseaux, &
+		Accompagnez le doux ramage &
+		Des tendres oiseaux.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{24}
+	\stanza
+		Bagpipes, resound in this laughing grove. &
+		In this shade, treat yourself &
+		To the murmur of streams. &
+		Join in the sweet warbling &
+		Of tender birds.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\song{Musette en rondeau}
+\begin{pairs}
+\begin{Leftside}
+	\setline{29}
+	\stanza
+		\stage{Bruit de tambours qui interrompt le ballet}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{29}
+	\stanza
+		\stage{The sound of drums interrupts the ballet.}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{H\'{e}b\'{e}}
+\begin{pairs}
+\begin{Leftside}
+	\setline{30}
+	\stanza
+		Qu'entends-je! Les tambours font taire nos musettes? &
+		C'est Bellone! Ses cris excitent les h\'{e}ros: &
+		Qu'elle va d\'{e}rober de sujets \`{a} Paphos!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{30}
+	\stanza
+		What's that I hear? The drums silence our bagpipes? &
+		It's Bellona!\mynote{bellona}{31}{Bellona is a Roman goddess of war.} Her cries excite heroes: &
+		The thief will convert the followers of Paphos!\mynote{paphos}{32}{Paphos, on the island of Cyprus, is said to be the birthplace of---and was the center of worship for---Aphrodite, the Greek goddess of love.}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\subsection*{Sc\`{e}ne 3}
+\addcontentsline{toc}{subsection}{Sc\`{e}ne 3}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{33}
+	\stanza
+		\scene{Bellone, H\'{e}b\'{e} et sa suite.} &
+		\scene{Bellone arrive au bruit des tambours et des trompettes qui la pr\'{e}c\`{e}dent avec des guerriers portant des drapeaux. Elle invite la suite d'H\'{e}b\'{e} \`{a} n'aimer que la gloire.}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{33}
+	\stanza
+		\scene{Bellona, Hebe and her followers.} &
+		\scene{Bellona arrives in the noise of drums and trumpets, preceded by warriors carrying flags. She invites the followers of Hebe to delight in her glory.}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Bellone}
+\begin{pairs}
+\begin{Leftside}
+	\setline{35}
+	\stanza
+		\stage{\`{a} la suite d'H\'{e}b\'{e}} &
+		La Gloire vous appelle: \'{e}coutez ses trompettes! &
+		H\^{a}tez-vous, armez-vous, et devenez guerriers! &
+		Quittez ces paisibles retraites! &
+		Combattez, il est temps de cueillir des lauriers.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{35}
+	\stanza
+		\stage{to Hebe's followers} &
+		Glory calls you: listen to her trumpets! &
+		Hurry, arm yourselves, and become warriors! &
+		Leave these peaceful havens! &
+		Fight, for it is time to gather laurels!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+ 
+\dialogue{Choeur}
+\begin{pairs}
+\begin{Leftside}
+	\setline{40}
+	\stanza
+		\stage{Les guerriers appellent les amants des nations alli\'{e}es. Ces amants g\'{e}n\'{e}reux se rangent pr\`{e}s de Bellone, et suivent les \'{e}tendards.} &
+		La Gloire vous appelle: \'{e}coutez ses trompettes! &
+		H\^{a}tez-vous, armez-vous, et devenez guerriers!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{40}
+	\stanza
+		\stage{The warriors call to the lovers of allied nations. These generous lovers arrange themselves near Bellona and follow the flags.} &
+		Glory calls you: listen to her trumpets! &
+		Hurry, arm yourselves, and become warriors!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\balletnum{airdeux}{Air pour deux guerriers portant les drapeaux}{Air for two warriors carrying the flags}
+
+\balletnum{airlesamants}{Air pour les amants et amantes qui suivent Bellone}{Air for the male and female lovers who follow Bellona}
+
+\dialogue{Choeur}
+\begin{pairs}
+\begin{Leftside}
+	\setline{43}
+	\stanza
+		Vous nous abandonnez. &
+		Quelle peine mortelle! &
+		Que vont devenir nos beaux jours! &
+		Quelle peine mortelle! &
+		\'{E}coutez les Amours. &
+		La Gloire nous appelle, &
+		Nous n'\'{e}coutons qu'elle.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{43}
+	\stanza
+		You abandon us. &
+		What mortal pain! &
+		What will become of our beautiful days? &
+		What mortal pain! &
+		Listen to the cupids. &
+		Glory calls us, &
+		But we don't listen to her.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\subsection*{Sc\`{e}ne 4}
+\addcontentsline{toc}{subsection}{Sc\`{e}ne 4}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{50}
+	\stanza
+		\scene{H\'{e}b\'{e}}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{50}
+	\stanza
+		\scene{Hebe}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{H\'{e}b\'{e}}
+\begin{pairs}
+\begin{Leftside}
+	\setline{51}
+	\stanza
+		Bellone les entra\^{i}ne\ldots{} &
+		O toi, vainqueur des Cieux, &
+		Viens prouver ton pouvoir supr\^{e}me! &
+		On ose te quitter pour suivre d'autres Dieux! &
+		Fils de V\'{e}nus, ah! qui peut mieux te venger que toi-m\^{e}me?
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{51}
+	\stanza
+		Bellona leads them away\ldots{} &
+		O you, victor of the Heavens, &
+		Come prove your supreme power! &
+		They dare leave you to follow other gods! &
+		Ah, Son of Venus!\mynote{venus}{55}{Cupid is the son of Venus, the Roman goddess of love whose Greek counterpart was Aphrodite.} Who better than you to avenge yourself?
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\subsection*{Sc\`{e}ne 5}
+\addcontentsline{toc}{subsection}{Sc\`{e}ne 5}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{56}
+	\stanza
+		\scene{L'Amour, H\'{e}b\'{e}, suite de H\'{e}b\'{e}. L'Amour descend des cieux sur des nuages; il porte des traits nouveaux; il est accompagn\'{e} d'une troupe d'Amours arm\'{e}s comme lui, dont les uns tiennent des brandons et les autres arborent des \'{e}tendards galants. Annonce de l'Amour}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{56}
+	\stanza
+		\scene{Cupid, Hebe, followers of Hebe. Cupid descends from the heavens on a cloud; he carries new darts; he is accompanied by a troupe of cupids armed like him, some of whom hold torches, while others boast gallant flags. Cupid's arrival is announced.}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{H\'{e}b\'{e}}
+\begin{pairs}
+\begin{Leftside}
+	\setline{57}
+	\stanza
+		L'Amour para\^{i}t arm\'{e}, qu'il soit victorieux!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{57}
+	\stanza
+		Cupid appears armed. Let him be victorious!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{L'Amour}
+\begin{pairs}
+\begin{Leftside}
+	\setline{58}
+	\stanza
+		Pourquoi Mars \`{a} l'Amour d\'{e}clara-t-il la guerre? &
+		Mars perd-t-il son encens, lorsqu'on vient m'en offrir? &
+		Jamais les myrthes sur la terre &
+		N'ont emp\^{e}ch\'{e} les lauriers de fleurir.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{58}
+	\stanza
+		Why did Mars\mynote{mars}{58}{Mars is the Roman god of war.} declare war against Cupid? &
+		Does Mars lose his incense when someone offers some to me? &
+		Never have the myrtles on earth\mynote{myrtleandlaurel}{60}{Myrtle is a white flower prized for its scent and symbolic link to purity; for these reasons it is sacred to Venus. Laurel, on the other hand, was shaped into wreaths to be worn by on the head by those who are victorious---in Rome, especially those military leaders returning home victorious from battle.} &
+		Prevented the laurels from blooming.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{H\'{e}b\'{e}}
+\begin{pairs}
+\begin{Leftside}
+	\setline{62}
+	\stanza
+		\stage{\`{a} l'Amour} &
+		Pour remplacer les coeurs que vous ravit Bellone, &
+		Fils de V\'{e}nus, lancez vos traits les plus certains; &
+		Conduisez les plaisirs dans les climats lointains, &
+		Quand l'Europe les abandonne!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{62}
+	\stanza
+		\stage{to Cupid} &
+		In order to change the hearts charmed by Bellona, &
+		Son of Venus, launch your darts with certainty; &
+		Shepherd the pleasures of distant lands, &
+		Since Europe abandons them!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+ 
+\dialogue{L'Amour}
+\begin{pairs}
+\begin{Leftside}
+	\setline{67}
+	\stanza
+		\stage{\`{a} sa suite} &
+		Ranimez vos flambeaux, remplissez vos carquois, &
+		Moisonnez, m\'{e}ritez les palmes les plus belles! &
+		Amours, remportez, \`{a} la fois, &
+		Cent victoires nouvelles!
+	\&
+	\stanza\setline{72}
+		L'horreur suit le terrible Mars; &
+		Les Jeux s'amusent sur vos traces, &
+		Partez, partez, vos nouveaux \'{e}tendards &
+		Sont l'ouvrage des Gr\^{a}ces.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{67}
+	\stanza
+		\stage{to his followers} &
+		Rekindle your torches, replenish your quivers, &
+		Reap, earn palm leaves of those faithful to Love! &
+		Cupids, achieve a hundred new victories &
+		All at once!
+	\&
+	\stanza\setline{72}
+		Horror follows terrible Mars; &
+		But games amuse themselves in your footsteps. &
+		Go, go, for your new flags &
+		Are made by the Graces themselves.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\balletnum{airlesamours}{Air pour les Amours}{Air for the cupids}
+
+\dialogue{L'Amour, H\'{e}b\'{e}}
+\begin{pairs}
+\begin{Leftside}
+	\setline{76}
+	\stanza
+		Traversez les plus vastes mers, &
+		Volez, volez, Amours, volez, volez! &
+		Portez vos armes et vos fers &
+		Sur le plus \'{e}loign\'{e} rivage! &
+		Est-il un coeur dans l'univers &
+		Qui ne vous doive son hommage?
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{76}
+	\stanza
+		Cross the widest seas, &
+		Fly, fly, cupids, fly, fly! &
+		Bring your weapons and your chains &
+		To the farthest shore! &
+		Is there a heart in the universe &
+		Who should not give you his tribute?
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Choeur}
+\begin{pairs}
+\begin{Leftside}
+	\setline{82}
+	\stanza
+		\stagel{Les Amours s'envolent pendant le choeur et se dispersent loin de l'Europe dans les diff\'{e}rents climats de l'Inde.} &
+		Traversez les plus vastes mers, &
+		Volez, volez, Amours, volez, volez! &
+		Portez vos armes et vos fers &
+		Sur le plus \'{e}loign\'{e} rivage!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{82}
+	\stanza
+		\stagel{The cupids fly during the chorus and disperse themselves, far from Europe, in the different climes of the Indies.} &
+		Cross the largest seas, &
+		Fly, fly, cupids, fly, fly! &
+		Bring your weapons and your chains &
+		To the farthest shore!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+% 
+% \section*{Act 1. Le Turc g\'{e}n\'{e}reux (The Gracious Turk)}
+% \addcontentsline{toc}{section}{Act 1. Le Turc g\'{e}n\'{e}reux}
+
+\newpage
+
+\section*{Act 2. Les Incas du P\'{e}rou (The Incas of Peru)}
+\addcontentsline{toc}{section}{Act 2. Les Incas du P\'{e}rou}
+\addtoendnotes{\protect\subsection*{Act 2.}}
+\addtoendnotes{\protect\addcontentsline{toc}{subsection}{Act 2.}}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{1}
+	\stanza
+		\scene{Le th\'{e}\^{a}tre repr\'{e}sente un d\'{e}sert du P\'{e}rou, termin\'{e} par une montagne aride. Le sommet en est couronn\'{e} par la bouche d'un volcan form\'{e}e de rochers calcin\'{e}s et couverts de cendres.}
+	\& 
+	\endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{1}
+	\stanza
+		\scene{The stage depicts a desert in Peru, ending in an arid mountain. The summit is crowned by the mouth of a volcano made of charred rocks and covered in ash.}
+	\&
+	\endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\subsection*{\textsc{Sc\`{e}ne 1}}
+\addcontentsline{toc}{subsection}{Sc\`{e}ne 1}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{2}
+	\stanza
+		\scene{Phani, Carlos, Officier espagnol.}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{2}
+	\stanza
+		\scene{Phani; Carlos, a Spanish officer.}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Carlos}
+\begin{pairs}
+\begin{Leftside}
+	\setline{3}
+	\stanza
+		Vous devez bannir de votre \^{a}me&
+		La criminelle erreur qui s\'{e}duit les Incas.&
+		Vous l'avez promis \`{a} ma flamme.&
+		Pourquoi diff\'{e}rez-vous? Non, vous ne m'aimez pas\ldots{}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{3}
+	\stanza
+		You must banish from your soul&
+		The criminal error that seduces the Incas.&
+		You have promised it to my flame.&
+		Why do you defer? No, you do not love me\ldots{}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Phani}
+\begin{pairs}
+\begin{Leftside}
+	\setline{7}
+	\stanza
+		Que vous p\'{e}n\'{e}trez mal mon secret embarras! &
+		Quel injuste soup\c{c}on! \ldots{}Quoi! Sans inqui\'{e}tude,&
+		Brise-t-on \`{a} la fois&
+		Les liens du sang et des lois?&
+		Excusez mon incertitude!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{7}
+	\stanza
+		How evilly you penetrate my hidden shame! &
+		What unjust suspicion! \ldots{}What, without concern,&
+		Do we loosen at one time &
+		Both ties of blood and of laws? &
+		Excuse my uncertainty!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+% \newpage
+
+\dialogue{Carlos}
+\begin{pairs}
+\begin{Leftside}
+	\setline{12}
+	\stanza
+		Dans un culte fatal, qui peut vous arr\^{e}ter?
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{12}
+	\stanza
+		In a fatal cult, who can stop you?
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Phani}
+\begin{pairs}
+\begin{Leftside}
+	\setline{13}
+	\stanza
+		Ne croyez point, Carlos, que ma raison balance!&
+		Mais de nos fiers Incas je crains la violence\ldots{}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{13}
+	\stanza
+		Do not believe, Carlos, that my reason is balanced!&
+		But I fear violence from our proud Incas\ldots{}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Carlos}
+\begin{pairs}
+\begin{Leftside}
+	\setline{15}
+	\stanza
+		Ah! Pouvez-vous les redouter?
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{15}
+	\stanza
+		Ah! Can you fear them?
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Phani}
+\begin{pairs}
+\begin{Leftside}
+	\setline{16}
+	\stanza
+		Sur ces monts, leurs derniers asiles,&
+		La f\^{e}te du Soleil va les ressembler tous\ldots{}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{16}
+	\stanza
+		On these mountains, their final asylums,&
+		They will all look alike during the Feast of the Sun\ldots{}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+ 
+\dialogue{Carlos}
+\begin{pairs}
+\begin{Leftside}
+	\setline{18}
+	\stanza
+		Du trouble de leurs jeux, que ne profitons-nous?
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{18}
+	\stanza
+		Don't we take advantage of the disturbance of their games?
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Phani}
+\begin{pairs}
+\begin{Leftside}
+	\setline{19}
+	\stanza
+		Ils observent mes pas\ldots{}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{19}
+	\stanza
+		They watch my steps\ldots{}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Carlos}
+\begin{pairs}
+\begin{Leftside}
+	\setline{20}
+	\stanza
+		Leurs soins sont inutiles,&
+		Si vous m'acceptez pour \'{e}poux.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{20}
+	\stanza
+		Their cares are pointless,&
+		If you accept me as husband.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Phani}
+\begin{pairs}
+\begin{Leftside}
+	\setline{22}
+	\stanza
+		Carlos, allez, pressez ce moment favorable,&
+		D\'{e}livrez-moi d'un s\'{e}jour d\'{e}testable!&
+		Mais ne venez pas seul ... Quel funeste malheur!&
+		Si votre mort ... Le peuple est barbare, implacable,&
+		Et quelquefois le nombre accable&
+		La plus intr\'{e}pide valeur;&
+		Ciel!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{22}
+	\stanza
+		Carlos, go, use this opportunity,&
+		Deliver me from a detestable stay!&
+		But do not come alone\ldots{} That would be deadly!&
+		If your death\ldots{} The people are barbaric, cruel,&
+		And sometimes a great number can overwhelm;&
+		The most fearless valor;&
+		Heaven!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+% \newpage
+
+\dialogue{Carlos}
+\begin{pairs}
+\begin{Leftside}
+	\setline{29}
+	\stanza
+		Pouviez-vous \^{e}tre alarm\'{e}e?&
+		Oubliez-vous que dans ces lieux&
+		Un seul de nos guerriers triomphe d'une arm\'{e}e?
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{29}
+	\stanza
+		Could you be alarmed?&
+		Did you forget that in these places&
+		A single one of our warriors is triumphant over an army?
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Phani}
+\begin{pairs}
+\begin{Leftside}
+	\setline{32}
+	\stanza
+		Je sais vos exploits glorieux,&
+		Et qu'\`{a} votre courage il n'est rien d'impossible.&
+		Cependant, cher Carlos, empruntez du secours!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{32}
+	\stanza
+		I know your glorious exploits&
+		And that to your courage everything is possible.&
+		However, dear Carlos, rely on support!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Carlos}
+\begin{pairs}
+\begin{Leftside}
+	\setline{35}
+	\stanza
+		Que craignez-vous?
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{35}
+	\stanza
+		What do you fear?
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Phani}
+\begin{pairs}
+\begin{Leftside}
+	\setline{36}
+	\stanza
+		H\'{e}las! Je suis sensible;&
+		Lorsque l'on aime, on craint toujours.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{36}
+	\stanza
+		Alas, I am sensitive!&
+		If one loves, one fears everything.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\subsection*{\textsc{Sc\`{e}ne 2}}
+\addcontentsline{toc}{subsection}{Sc\`{e}ne 2}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{38}
+	\stanza
+		\scene{Phani seule}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{38}
+	\stanza
+		\scene{Phani alone}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Phani}
+\begin{pairs}
+\begin{Leftside}
+	\setline{39}
+	\stanza
+		Viens, Hymen, viens m'unir au vainqueur que j'adore!&
+		Forme tes noeuds, encha\^{i}ne-moi!&
+		Dans ces tendres instants o\`{u} ma flamme t'implore,&
+		L'amour m\^{e}me n'est pas plus aimable que toi.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{39}
+	\stanza
+		Hymen, come join me to the conqueror, whom I love!&
+		Tie your knots, enchain me!&
+		In the tender moments where my passion implores you,&
+		Even love itself is less lovely than you.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}	
+
+\subsection*{\textsc{Sc\`{e}ne 3}}
+\addcontentsline{toc}{subsection}{Sc\`{e}ne 3}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{43}
+	\stanza
+		\scene{Phani, Huascar}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{43}
+	\stanza
+		\scene{Phani, Huascar}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Huascar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{44}
+	\stanza
+		\stage{\`{a} part}&
+		Elle est seule\ldots{} parlons! L'instant est favorable\ldots{}&
+		Mais je crains d'un rival l'obstacle redoutable.&
+		Parlons au nom des Dieux pour surprendre son coeur!&
+		Tout ce que dit l'Amour est toujours pardonnable,&
+		Et le ciel que je sers doit servir mon ardeur.
+	\&
+	\stanza\setline{50}		
+		\stage{\`{a} Phani}&
+		Le dieu de nos climats dans ce beau jour m'inspire.&
+		Princesse, le soleil daigne veiller sur vous,&
+		Et lui-m\^{e}me dans notre empire,&
+		Il pr\'{e}tend par ma voix vous nommer un \'{e}poux.&
+		Vous fr\'{e}missez\ldots{} D'o\`{u} vient que votre coeur soupire?
+	\&
+	\stanza\setline{56}
+		Ob\'{e}issons sans balancer&
+		Lorsque le ciel commande!&
+		Nous ne pouvons trop nous presser&
+		D'accorder ce qu'il nous demande;&
+		Y r\'{e}fl\'{e}chir, c'est l'offenser.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{44}
+	\stanza
+		\stage{aside}&
+		She is alone\ldots{} let us speak! The moment is favorable\ldots{}&
+		But I fear the formidable obstacle of a rival.&
+		We'll implore the gods to surprise her heart!&
+		Everything said to Cupid is always pardonable,&
+		And the heaven that I serve must serve my ardor.
+	\&
+	\stanza\setline{50}
+		\stage{to Phani}&
+		The god of our atmosphere in this beautiful day inspires me.&
+		Princess, the sun himself deigns to look upon you,&
+		And himself in our empire,&
+		He argues through my voice for you to name a husband.&
+		You shudder\ldots{} Why does your heart sigh?
+	\&
+	\stanza\setline{56}
+		Obey without hesitation&
+		When the sky commands it!&
+		No rushing is too much&
+		For us to grant what is demanded of us;&
+		To first think about it, that's the offense.
+    \&
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Phani}
+\begin{pairs}
+\begin{Leftside}
+	\setline{61}
+	\stanza
+		Non, non, je ne crois pas tout ce que l'on assure &
+		En attestant les cieux;&
+		C'est souvent l'imposture &
+		Qui parle au nom des Dieux.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{61}
+	\stanza
+		No, no, I do not believe all that you provide &
+		As evidencing the heavens; &
+		It is often the imposter &
+		Who speaks in the name of the Gods.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Huascar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{65}
+	\stanza
+		Pour les Dieux et pour moi, quelle coupable injure! &
+		Je sais ce qui produit votre incr\'{e}dulit\'{e}, &
+		C'est l'amour! Dans votre \^{a}me, il est seul \'{e}cout\'{e}!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{65}
+	\stanza
+		For the Gods and for me, what culpable abuse! &
+		I know that which creates your incredulity, &
+		It's love! In your soul, love alone is heard!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Phani}
+\begin{pairs}
+\begin{Leftside}
+	\setline{68}
+	\stanza
+		L'amour! Que croyez-vous?
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{68}
+	\stanza
+		Love! What do you believe?
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+
+\dialogue{Huascar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{69}
+	\stanza
+		Oui, vous aimez, perfide,&
+		Un de nos vainqueurs inhumains.&
+		Ciel! Mettras-tu toujours tes armes dans leurs mains?
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{69}
+	\stanza
+		Yes, you love, perfidious,&
+		One of our inhumane conquerors.&
+		Heaven! Will you still put your weapons in their hands?
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Phani}
+\begin{pairs}
+\begin{Leftside}
+	\setline{72}
+	\stanza
+		Redoutez le Dieu qui les guide!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{72}
+	\stanza
+		Fear the God who guides them!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+% \newpage
+
+\dialogue{Huascar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{73}
+	\stanza
+		C'est l'or qu'avec empressement,&
+		Sans jamais s'assouvir, ces barbares d\'{e}vorent.&
+		L'or qui de nos autels ne fait que l'ornement&
+		Est le seul Dieu que nos tyrans adorent.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{73}
+	\stanza
+		It's gold that with eagerness,&
+		Without satiety, these barbarians devour---&
+		Gold which on our altars is only ornament.&
+		Gold is the sole God our tyrants adore.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Phani}
+\begin{pairs}
+\begin{Leftside}
+	\setline{77}
+	\stanza
+		T\'{e}m\'{e}raire! Que dites-vous!&
+		R\'{e}v\'{e}rez leur puissance, et craignez leur courroux.&
+		Pour leur obtenir vos hommages,&
+		Faut-il des miracles nouveaux?&
+		Vous avez vu, de nos rivages,&
+		Leurs villes voler sur les eaux;&
+		Vous avez vu, dans l'horreur de la guerre,&
+		Leur invincible bras disposer du tonnerre\ldots{}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{77}
+	\stanza
+		Audacity! What do you say?&
+		Revere their power, and fear their wrath.&
+		In order to get your tributes,&
+		Must there be new miracles?&
+		From our shores, you have seen&
+		Their cities flying over the waters;&
+		In the horror of war, you have seen&
+		Their invincible arms creating thunder\ldots{}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\subsection*{\textsc{Sc\`{e}ne 4}}
+\addcontentsline{toc}{subsection}{Sc\`{e}ne 4}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{85}
+	\stanza
+		\scene{Huascar et un Inca, son confident. On entend un pr\'{e}lude qui annonce la f\^{e}te du Soleil.}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{85}
+	\stanza
+		\scene{Huascar and an Inca, his confidant. We listen to a prelude announcing the Feast of the Sun.}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Huascar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{86}
+	\stanza
+		\stage{\`{a} part}&
+		On vient, dissimulons mes transports \`{a} leurs yeux!
+	\&
+	\stanza\setline{88}
+		\stage{\`{a} l'Inca qu'il appelle}&
+		Vous savez mon projet. Allez, qu'on m'ob\'{e}isse\ldots{}
+	\&
+	\stanza\setline{90}
+		\stage{\`{a} part}&
+		Je n'ai donc plus pour moi qu'un barbare artifice,&
+		Qui de flamme et de sang inondera ces lieux.&
+		Mais que ne risque point un amour furieux?
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{86}
+	\stanza
+		\stage{aside}&
+		Someone comes\ldots{} let us conceal my tricks from their eyes!
+	\&
+	\stanza\setline{88}
+		\stage{calling to the Inca}&
+		You know my project. Go ahead, so that she obeys me\ldots{}
+	\&
+	\stanza\setline{90}
+		\stage{aside}&
+		I don't have much more for me than a barbaric trick,&
+		That flame and blood will flood this place.&
+		But does that not risk a furious love?
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\subsection*{\textsc{Sc\`{e}ne 5}}
+\addcontentsline{toc}{subsection}{Sc\`{e}ne 5}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{94}
+	\stanza
+		\scene{F\^{e}te du Soleil}&
+		\scene{Huascar, Phani, ramen\'{e}e par des Incas, Pallas et Incas, Sacrificateurs, P\'{e}ruviens et P\'{e}ruviennes}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{94}
+	\stanza
+		\scene{Feast of the Sun}&
+		\scene{Huascar, Phani, brought by the Incas, Pallas and Incas, Priests, Peruvian men and women}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Huascar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{96}
+	\stanza
+		Soleil, on a d\'{e}truit tes superbes asiles,&
+		Il ne te reste plus de temple que nos coeurs.&
+		Daigne nous \'{e}couter dans ces d\'{e}serts tranquilles!&
+		Le z\`{e}le est pour les Dieux le plus cher des honneurs.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{96}
+	\stanza
+		Sun, we destroyed your superb havens,&
+		No more remains for you than the temple of our hearts.&
+		Deign to hear us, in these tranquil deserts!&
+		Our zeal is for the Gods the highest of honors.
+   	\&
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\balletnum{preludeadoration}{Pr\'{e}lude pour l'adoration du Soleil}{Prelude for the adoration of the Sun}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{100}
+	\stanza
+		\stage{Les Pallas et Incas font leur adoration au Soleil}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{100}
+	\stanza
+		\stage{The Pallas and Incas display their adoration to the Sun}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Huascar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{101}
+	\stanza
+		Brillant soleil, jamais nos yeux, dans ta carri\`{e}re,&
+		N'ont vu tomber de noirs frimas,&
+		Et tu r\'{e}pands dans nos climats&
+		Ta plus \'{e}clatante lumi\`{e}re.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{101}
+	\stanza
+		Brilliant sun, in your career, our eyes &
+		Have never seen black frost falling,&
+		And you pour out in our climes&
+		Your brightest light.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\balletnum{airdesincas}{Air des Incas pour la d\'{e}votion du Soleil}{Air of the Incas for the Sun's devotion}
+
+\song{Danse de P\'{e}ruviens et de P\'{e}ruviennes}
+
+\dialogue{Huascar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{105}
+	\stanza
+		Clair flambeau du monde,&
+		L'air, la terre et l'onde&
+		Ressentent tes bienfaits!&
+		Clair flambeau du monde,&
+		L'air, la terre et l'onde&
+		Te doivent leurs attraits!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{105}
+	\stanza
+		Clear torch of the world,&
+		The air, the earth, and the wave&
+		All feel your kindness!&
+		Clear torch of the world,&
+		The air, the earth, and the wave&
+		All must give you their charms!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Choeur}
+\begin{pairs}
+\begin{Leftside}
+	\setline{111}
+	\stanza
+		Clair flambeau du monde,&
+		L'air, la terre et l'onde&
+		Ressentent tes bienfaits!&
+		Clair flambeau du monde,&
+		L'air, la terre et l'onde&
+		Te doivent leurs attraits!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{111}
+	\stanza
+		Clear torch of the world,&
+		The air, the earth, and the wave&
+		All feel your kindness!&
+		Clear torch of the world,&
+		The air, the earth, and the wave&
+		All must give you their charms!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Huascar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{117}
+	\stanza
+		Par toi dans nos champs tout abonde.&
+		Nous ne pouvons compter les biens que tu nous fais.&
+		Chantons-les seulement! Que l'\'{e}cho nous r\'{e}ponde!&
+		Que ton nom dans nos bois retentisse \`{a} jamais!&
+		Tu laisses l'univers dans une nuit profonde,&
+		Lorsque tu disparais;&
+		Et nos yeux, en perdant ta lumi\`{e}re f\'{e}conde,&
+		Perdent tous leurs plaisirs; la beaut\'{e} perd ses traits.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{117}
+	\stanza
+		By you, all abounds in our fields.&
+		We cannot count your blessings.&
+		Let us sing only of them! Let the echo meet us!&
+		May your name forever resound in our woods!&
+		You leave the universe in profound darkness,&
+		When you disappear;&
+		And our eyes, in losing your fecund light,&
+		Lose all their pleasures; even Beauty herself loses her features.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\song{Loure en rondeau}
+
+\dialogue{Huascar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{125}
+	\stanza
+		Permettez, astre du jour,&
+		Qu'en chantant vos feux nous chantions d'autres flammes&
+		Partagez, astre du jour,&
+		L'encens de nos \^{a}mes&
+		Avec le tendre amour.&
+		Le soleil, en guidant nos pas,&
+		R\'{e}pand ses app\^{a}ts&
+		Dans les routes qu'il pare.&
+		Raison, quand malgr\'{e} tes soins,&
+		L'amour nous \'{e}gare,&
+		Nous pla\^{i}t-il moins?&
+		Vous brillez, astre du jour,&
+		Vous charmez nos yeux par l'\'{e}clat de vos flammes!&
+		Vous brillez, astre du jour! L'astre de nos \^{a}mes,&
+		C'est le tendre amour.&
+		De nos bois chassez la tristesse,&
+		R\'{e}gnez-y sans cesse, Dieux de nos coeurs!&
+		De la nuit le coile sombre&
+		Sur vos attraits n'\'{e}tend jamais son ombre;&
+ 		Tous les temps, aimables vainqueurs,&
+ 		Sont marqu\'{e}s par vos faveurs.
+    \& 
+	\stanza
+		\stage{On danse, et la f\^{e}te est troubl\'{e}e par un tremblement de terre.}
+	\&
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{125}
+	\stanza
+		Daystar, permit&
+		That in singing of your light, as we once sang of other fires&
+		Share, Daystar,&
+		The incense of our souls&
+		With tender love.&
+		The sun, in guiding our steps,&
+		Spreads his lures&
+		In the routes that he shields.&
+		Reason, when in spite of your care,&
+		Love leads us astray,&
+		Do we please it less?&
+		Shine, Daystar!&
+		Charm our eyes by the brightness of your flames!&
+		Shine, Daystar! Star of our souls,&
+		It's tender love.&
+		Chase sadness from our woods,&
+		And reign there forever, God of our hearts!&
+		Though the gloomy night coils&
+		Around your charms, never extend his shadow;&
+ 		All the time, kind victors,&
+ 		Are marked by your favors.
+    \& 
+	\stanza
+		\stage{They dance, and the feast is troubled by an earthquake.}
+	\&
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\song{1$^{er}$  Gavotte}
+
+\song{2$^{e}$ Gavotte en Rondeau}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{148}
+	\stanza
+		\stage{Tremblement de terre}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{148}
+	\stanza
+		\stage{Earthquake}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Choeur}
+\begin{pairs}
+\begin{Leftside}
+	\setline{149}
+	\stanza
+		Dans les ab\^{i}mes de la terre,&
+		Les vents se d\'{e}clarent la guerre.
+    \& 
+	\stanza\skipnumbering
+		\stage{L'air s'obscurcit, le tremblement redouble, le volcan s'allume et jette par tourbillons du feu et de la fum\'{e}e.}
+	\&
+	\stanza
+		Les rochers embras\'{e}s s'\'{e}lancent dans les airs,&
+		Et portent jusqu'aux cieux les flammes des enfers.
+	\&
+	\stanza
+		\stage{L'\'{e}pouvante saisit les P\'{e}ruviens, l'assembl\'{e}e se disperse. Huascar arr\^{e}te Phani. Le tremblement de terre semble s'apaiser.}
+	\&
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{149}
+	\stanza
+		In the depths of the earth,&
+		Winds declare war.
+	\& 
+	\stanza\skipnumbering
+		\stage{The air darkens, the trembling redoubles, and the volcano illuminates and erupts clouds of fire and smoke.}
+	\&
+	\stanza
+		The fiery rocks dart into the air&
+		And carry to heaven the flames of hell.
+	\&
+	\stanza
+		\stage{Horror seizes the Peruvians, and the assembly scatters. Huascar stops Phani. The earthquake seems to subside.}
+	\&
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\subsection*{\textsc{Sc\`{e}ne 6}}
+\addcontentsline{toc}{subsection}{Sc\`{e}ne 6}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{155}
+	\stanza
+		\scene{Huascar, Phani}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{155}
+	\stanza
+		\scene{Huascar, Phani}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Huascar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{156}
+	\stanza
+		\stage{\`{a} Phani qui traverse le th\'{e}\^{a}tre en s'enfuyant}&
+		Arr\^{e}tez! Par ces feux le ciel vient de m'apprendre&
+		Qu'\`{a} son arr\^{e}t il faut vous rendre,&
+		Et l'hymen\ldots{}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{156}
+	\stanza
+		\stage{to Phani, fleeing across the stage}&
+		Stop! By these lights the sky has just taught me&
+		That it is necessary for you to follow by its judgment,&
+		And marriage\ldots{}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Phani}
+\begin{pairs}
+\begin{Leftside}
+	\setline{160}
+	\stanza
+		Qu'allez-vous encore me r\'{e}v\'{e}ler?&
+		O jour funeste! Dois-je croire&
+		Que le ciel, jaloux de sa gloire,&
+		Ne s'explique aux humains qu'en les faisant trembler?
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{160}
+	\stanza
+		What more are you going to show me?&
+		Oh, fatal day! Must I believe&
+		That the sky, jealous of his glory,&
+		Can explain himself to humans only by rattling?
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Huascar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{164}
+	\stanza
+		\stage{l'arr\^{e}tant encore}&
+		Vous fuyez, quand les Dieux daignent vous appeler!&
+		Eh bien! cruelle, eh bien! vous allez me conna\^{i}tre.&
+		Suivez l'amour jaloux!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{164}
+	\stanza
+		\stage{stopping her again}&
+		You flee when the Gods deign to call you!&
+		Ah well! Well! Cruelly will you know me.&
+		Follow jealous love!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Phani}
+\begin{pairs}
+\begin{Leftside}
+	\setline{168}
+	\stanza
+		\stage{se reculant}&
+		Ton crime ose para\^{i}tre!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{168}
+	\stanza
+		\stage{recoiling}&
+		Your crime dares to appear!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Huascar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{170}
+	\stanza
+		Que l'on est criminel lorsque l'on ne pla\^{i}t pas!&
+		Du moins en me suivant \'{e}vitez le tr\'{e}pas!\ldots{}
+	\&
+	\stanza\skipnumbering
+		Ici je vois partout l'affreuse mort suivie&
+		D'un redoutable embrasement.&
+		Chaque instant peut de votre vie&
+		Devenir le dernier moment.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{170}
+	\stanza
+		That one is criminal when one doesn't like!&
+		At least in following me you avoid demise!\ldots{}
+	\&
+	\stanza\skipnumbering
+		Here I see everywhere horrible death which follows&
+		From a dreadful conflagration.&
+		Each instant can become&
+		The final moment of your life.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+% \newpage
+
+\subsection*{\textsc{Sc\`{e}ne 7}}
+\addcontentsline{toc}{subsection}{Sc\`{e}ne 7}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{177}
+	\stanza
+		\scene{Phani, Huascar, Carlos}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{177}
+	\stanza
+		\scene{Phani, Huascar, Carlos}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Huascar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{178}
+	\stanza
+		\stage{\`{a} Phani}&
+		Quoi! Plus que le p\'{e}ril mon amour vous \'{e}tonne?&
+		C'est trop me r\'{e}sister\ldots{}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{178}
+	\stanza
+		\stage{to Phani}&
+		What! More than danger, my love surprises you?&
+		It's too much to resist me\ldots{}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Phani}
+\begin{pairs}
+\begin{Leftside}
+	\setline{181}
+	\stanza
+		O ciel, entends mes voeux!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{181}
+	\stanza
+		Oh heaven, hear my wishes!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Huascar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{182}
+	\stanza
+		C'est aux miens qu'il vous abandonne.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{182}
+	\stanza
+		It's mine that you have abandoned.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Carlos}
+\begin{pairs}
+\begin{Leftside}
+	\setline{183}
+	\stanza
+		\stage{arrivant sur Huascar un poignard \`{a} la main}&
+		Tu t'abuses, barbare!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{183}
+	\stanza
+		\stage{arriving at Huascar with a daggar in hand}&
+		You are mistaken, Barbarian!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Phani}
+\begin{pairs}
+\begin{Leftside}
+	\setline{185}
+	\stanza
+		Ah! Carlos! Je frissonne.&
+		Le soleil jusqu'au fond des antres les plus creux&
+		Vient d'allumer la terre, et son courroux pr\'{e}sage\ldots{}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{185}
+	\stanza
+		Ah, Carlos! I shudder.&
+		All the way to the bottom of the deepest caverns, the Sun&
+		Just illuminated the earth, and his wrath forebodes\ldots{}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Carlos}
+\begin{pairs}
+\begin{Leftside}
+	\setline{188}
+	\stanza
+		Princesse, quelle erreur!&
+		C'est le ciel qu'elle outrage.&
+		Cet embrasement dangereux&
+		Du soleil n'est point l'ouvrage,&
+		Il est celui de sa rage.&
+		Un seul rocher jet\'{e} dans ces gouffres affreux,&
+		Y r\'{e}veillant l'ardeur de ces terribles feux,&
+		Suffit pour exciter un si fatal ravage.&
+		Le perfide esp\'{e}rait vous tromper dans ce jour,&
+		Et que votre terreur servirait son amour.&
+		Sur ces monts mes guerriers punissent ses complices,&
+		Ils vont trouver dans ces noirs pr\'{e}cipices&
+		Des tombeaux dignes d'eux.
+	\&
+	\stanza\skipnumbering
+		\stage{\`{a} Huascar}&
+		Mais il te faut de plus cruels supplices.
+	\&
+	\stanza
+		\stage{\`{a} Phani}&
+		Accordez votre main \`{a} son rival heureux,&
+		C'est l\`{a} son ch\^{a}timent!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{188}
+	\stanza
+		Princess, what a mistake!&
+		The sky is that which outrages the earth.&
+		This dangerous blaze&
+		Is not the sun's work;&
+		The sun is the object of her anger.&
+		A single rock thrown into those dreadful chasms,&
+		Awakens there the passion of these terrible fires,&
+		Enough to excite such a fatal disaster.&
+		The traitor hopes to mislead you this day,&
+		And that your terror would serve his love.&
+		On these mountains my warriors punish his accomplices.&
+		They will find in these dark ravines&
+		Tombs worthy of them.
+	\&
+	\stanza\skipnumbering
+		\stage{to Huascar}&
+		But you deserve crueler torture.
+	\&
+	\stanza
+		\stage{to Phani}&
+		Grant your hand to his fortunate rival:&
+		That there is his punishment!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Huascar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{206}
+	\stanza
+		Ciel! Qu'il est rigoureux
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{206}
+	\stanza
+		Heaven! He is severe.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Phani, Carlos}
+\begin{pairs}
+\begin{Leftside}
+	\setline{207}
+	\stanza
+		Pour jamais, l'amour nous engage.&
+		Non, non, rien n'est \'{e}gal \`{a} ma f\'{e}licit\'{e}.&
+		Ah! Mon coeur a bien m\'{e}rit\'{e}&
+		Le sort qu'avec vous il partage.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{207}
+	\stanza
+		Love engages us forever.&
+		No, no, no, nothing compares to my bliss.&
+		Ah! My heart has well earned&
+		The fate that it shares with you.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Huascar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{211}
+	\stanza
+		Non, non, rien n'\'{e}gale ma rage.&
+		Je suis t\'{e}moin de leur f\'{e}licit\'{e}.&
+		Faut-il que mon coeur irrit\'{e}&
+		Ne puisse \^{e}tre veng\'{e} d'un si cruel outrage?
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{211}
+	\stanza
+		No, no, nothing compares to my rage.&
+		I am a witness of their bliss.&
+		Must my irritated heart&
+		Be beyond vengeance of so cruel an outrage?
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\subsection*{\textsc{Sc\`{e}ne 8}}
+\addcontentsline{toc}{subsection}{Sc\`{e}ne 8}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{215}
+	\stanza
+		\scene{Les m\^{e}mes. Le volcan se rallume, et le tremblement de terre recommence.}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{215}
+	\stanza
+		\scene{The same place. The volcano is once again active, and the earthquake resumes.}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Huascar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{216}
+	\stanza
+		La flamme se rallume encore,&
+		Loin de l'\'{e}viter, je l'implore\ldots{}&
+		Ab\^{i}mes embras\'{e}s, j'ai trahi les autels.&
+		Exercez l'emploi du tonnerre,&
+		Vengez les droits des immortels,&
+		D\'{e}chirez le sein de la terre&
+		Sous mes pas chancelants!&
+		Renversez, dispersez ces arides montagnes,&
+		Lancez vos feux dans ces tristes campagnes,&
+		Tombez sur moi, rochers br\^{u}lants.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{216}
+	\stanza
+		The flame returns again,&
+		I beg for distance to avoid it\ldots{}&
+		Blazing depths, I have betrayed the altars.&
+		Exercise the use of the thunder,&
+		Avenge the rights of the immortals,&
+		Rip the breast of the earth&
+		Beneath my unsteady footsteps!&
+		Spill, scatter these arid mountains,&
+		Launch your fires in this sad countryside,&
+		Fall upon me, hot rocks.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{226}
+	\stanza
+		\stage{Le volcan vomit des rochers enflamm\'{e}s qui \'{e}crasent le criminel Huascar.}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{226}
+	\stanza
+		\stage{The volcano vomits fiery rocks that crush the criminal Huascar.}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+% \newpage
+% 
+% \section*{Act 3.~Les Fleurs (The Flowers)}
+% \addcontentsline{toc}{section}{Act 3.~Les Fleurs}
+
+\newpage
+
+\section*{Act 4.~Les sauvages (The American Indians)}
+\addcontentsline{toc}{section}{Act 4.~Les sauvages}
+\addtoendnotes{\protect\subsection*{Act 4.}}
+\addtoendnotes{\protect\addcontentsline{toc}{subsection}{Act 4.}}
+\addtoendnotes{Fuzelier added the fourth act in 1736, seven months after the opera's premiere.\newline}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{1}
+	\stanza
+		\scene{Le th\'{e}\^{a}tre repr\'{e}sente un bosquet d'une for\^{e}t de l'Am\'{e}rique, voisine des colonies fran\c{c}aises et espagnoles o\`{u} doit se c\'{e}l\'{e}brer la c\'{e}r\'{e}monie du Grand Calumet de la Paix.}
+	\& 
+	\endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{1}
+	\stanza
+		\scene{The stage depicts a forest grove in America, near the French and Spanish colonies, the place for conducting the ritual of the Great Pipe of Peace.}
+	\&
+	\endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\subsection*{\textsc{Sc\`{e}ne 1}}
+\addcontentsline{toc}{subsection}{Sc\`{e}ne 1}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{2}
+	\stanza
+		\scene{Adario commandant les guerriers de la nation sauvage.} &
+		\scene{On entend les fanfares des trompettes fran\c{c}aises.}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{2}
+	\stanza
+		\scene{Adario commanding the warriors of the Indian nation.} &
+		\scene{We hear the fanfares of French trumpets.}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\begin{center}
+	\textbf{\textsc{Adario}}
+\end{center}
+\begin{pairs}
+\begin{Leftside}
+	\setline{4}
+	\stanza
+		Nos guerriers, par mon ordre unis \`{a} nos vainqueurs,&
+		Vont ici de la paix c\'{e}l\'{e}brer les douceurs; &
+		Mon coeur seul dans ces lieux trouve encor des alarmes. &
+		Je vois deux \'{e}trangers illustres par les armes, &
+		\'{E}pris de l'objet de mes voeux; &
+		Je crains leurs soupirs dangereux, &
+		Et que leur sort brillant pour Zima n'ait des charmes. &
+		Rivaux de mes exploits, rivaux de mes amours, &
+		H\'{e}las! dois-je toujours & 
+		Vous c\'{e}der la victoire? &
+		Ne paraissez-vous dans nos bois &
+		Que pour triompher \`{a} la fois &
+		De ma tendresse et de ma gloire? &
+		\stage{apercevant ses rivaux} &
+		Ciel! Ils cherchent Zima\ldots{} voudrait-elle changer? &
+		Cachons-nous\ldots{} apprenons ce que je dois en croire! &
+		Sachons et si je dois et sur qui me venger! &
+		\stage{Il se cache \`{a} l'entr\'{e}e de la for\^{e}t et les observe.}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{4}
+	\stanza
+		Our warriors, by my order united with our conquerors,&
+		Gather here to celebrate the delights of peace;&
+		My heart alone in these places still finds cause for alarm. &
+		I see two foreigners shining with weapons, &
+		Infatuated by the object of my desire; &
+		I fear their sighs are dangerous &
+		And that their dazzling fate is charming for Zima. &
+		Rivals of my exploits, rival of my loves, &
+		Alas! must I always and again &
+		Cede you the victory? &
+		Don't you appear in our wood &
+		To overcome at once both &
+		My love and my glory? &
+		\stage{seeing his rivals} &
+		Heavens! They look for Zima\ldots{} would she change? &
+		Let us hide\ldots{} we'll learn that which I can't help believing! &
+		Let us know whether and on whom I must avenge myself! &
+		\stage{He hides at the edge of the forest and watches them.}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs} 
+
+\subsection*{\textsc{Sc\`{e}ne 2}}
+\addcontentsline{toc}{subsection}{Sc\`{e}ne 2}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{22}
+	\stanza
+		\scene{Damon, officier fran\c{c}ais, Don Alvar,}&
+		\scene{officier espagnol, Adario cach\'{e}.}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{22}
+	\stanza
+		\scene{Damon, French officer; Don Alvar,}&
+		\scene{Spanish officer; Adario, hidden.}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\begin{center}
+	\textbf{\textsc{Alvar}}
+\end{center}
+\begin{pairs}
+\begin{Leftside}
+	\setline{24}
+	\stanza
+		Damon, quelle vaine esp\'{e}rance &
+		Sur les pas de Zima vous attache aujourd'hui? &
+		Vous outragez l'amour, et vous comptez sur lui! &
+		Croyez-vous ses faveurs le prix de l'inconstance?
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{24}
+	\stanza
+		Damon, what vain hope &
+		Have you attached on the footsteps of Zima today? &
+		You outrage Cupid, and yet you rely on him! &
+		Do you believe his favors to be the prize of inconstancy?
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Damon}
+\begin{pairs}
+\begin{Leftside}
+	\setline{28}
+	\stanza
+		L'inconstance ne doit blesser &
+		Que les attraits qu'on abandonne. &
+		Non, le fils de V\'{e}nus ne peut pas s'offenser &
+		Lorsque nous recevons tous les traits qu'il nous donne. &
+		Un coeur qui change chaque jour, &
+		Chaque jour fait pour lui des conqu\^{e}tes nouvelles, &
+		Les fid\`{e}les amants font la gloire des belles, &
+		Mais les amants l\'{e}gers font celle de l'amour. &
+		Dans ces lieux fortun\'{e}s c'est ainsi que l'on pense; &
+		De la tyrannique constance &
+		Les coeurs n'y suivent point les lois.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{28}
+	\stanza
+		Inconstancy should only hurt &
+		Those attractions that one abandons. &
+		No, the son of Venus cannot be offended &
+		When we are hit with every barb he gives us. &
+		A heart that changes each day, &
+		Each day brings to him new conquests, &
+		Faithful lovers are the glory of beautiful women, &
+		But trivial lovers are the glory of Cupid. &
+		In these fortunate wilds especially, this is how one thinks; &
+		Hearts never follow the laws &
+		Of tyrannical constancy.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Alvar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{39}
+	\stanza
+		\stage{apercevant Zima} &
+		Tout les prescrit au mien\ldots{} &
+		C'est Zima que je vois!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{39}
+	\stanza
+		\stage{noticing Zima} &
+		Everything my heart requires\ldots{} &
+		It's Zima that I see!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\subsection*{\textsc{Sc\`{e}ne 3}}
+\addcontentsline{toc}{subsection}{Sc\`{e}ne 3}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{42}
+	\stanza
+		\scene{Zima, fille du chef de la nation sauvage}&
+		\scene{Alvar, Damon, Adario cach\'{e}.}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{42}
+	\stanza
+		\scene{Zima, daughter of the chief of the Indian nation;}&
+		\scene{Alvar; Damon; Adario, hidden.}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Alvar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{44}
+	\stanza
+		\stage{\`{a} Zima} &
+		Ne puis-je vous fl\'{e}chir par ma pers\'{e}v\'{e}rance?
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{44}
+	\stanza
+		\stage{to Zima} &
+		Can't I win you over with my perseverance?
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Damon}
+\begin{pairs}
+\begin{Leftside}
+	\setline{46}
+	\stanza
+		\stage{\`{a} Zima} &
+		Ne vous lassez-vous point de votre indiff\'{e}rence?
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{46}
+	\stanza
+		\stage{to Zima} &
+		Do you not tire of your indifference?
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Zima}
+\begin{pairs}
+\begin{Leftside}
+	\setline{48}
+	\stanza
+		Vous aspirez tous deux \`{a} m\'{e}riter mon choix; &
+		Apprenez que l'amour sait plaire dans nos bois! 
+	\&
+	\stanza\skipnumbering
+		Nous suivons sur nos bord l'innocente nature, &
+		Et nous n'aimons que d'un amour sans art. &
+		Notre bouche et nos yeux ignorent l'imposture; &
+		Sous cette riante verdure, &
+		S'il \'{e}clate un soupir, s'il \'{e}chappe un regard, &
+		C'est du coeur qu'il part.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{48}
+	\stanza
+		You both aspire to earn my choice; &
+		Know that love knows how to please in our woods! 
+	\&
+	\stanza\skipnumbering
+		We follow an innocent nature in our borders, &
+		And we do not love unless it is without art. &
+		Our mouth and our eyes are unaware of deceit; &
+		Under this pleasant green, &
+		If a sigh bursts, if a glance escapes, &
+		It comes from the heart.
+    \&
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Damon, Alvar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{56}
+	\stanza
+		Vous d\'{e}cidez pour moi; j'obtiens votre suffrage.&
+		Ah! Quel heureux instant!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{56}
+	\stanza
+		You choose me; I get your approval.&
+		Ah! What a happy moment!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Alvar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{58}
+	\stanza
+		La nature qui seule attire votre hommage &
+		Nous dit qu'il faut \^{e}tre constant.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{58}
+	\stanza
+		Nature, who alone is worthy of praise, &
+		Tells us we must be constant.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Damon}
+\begin{pairs}
+\begin{Leftside}
+	\setline{60}
+	\stanza
+		Elle prouve \`{a} nos yeux qu'il faut \^{e}tre volage.
+	\&
+	\stanza\setline{61}
+		La terre, les cieux et les mers &
+		Nous offrent tour \`{a} tour cent spectacles divers; &
+		Les plus beaux jours entr'eux ont de la diff\'{e}rence; &
+		N'est-il d\'{e}fendu qu'\`{a} nos coeurs &
+		De go\^{u}ter les douceurs &
+		Que verse partout l'inconstance? &
+		\stage{\`{a} Zima} &
+		Voil\`{a} vos sentiments\ldots{} dans vos sages climats &
+		L'inconstance n'est point un crime.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{60}
+	\stanza
+		She proves to our eyes that one must be fickle.
+	\&
+	\stanza\setline{61}
+		The earth, the skies, and the seas, &
+		Provide us by turns a hundred various spectacles; &
+		The finest days among them differ from each other; &
+		Is it only forbidden to our hearts &
+		To taste the sweetness &
+		That inconstancy displays everywhere? &
+		\stage{to Zima} &
+		These are your beliefs\ldots{} in your noble-minded climes &
+		Inconstancy isn't a crime.
+    \&
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Zima}
+\begin{pairs}
+\begin{Leftside}
+	\setline{70}
+	\stanza
+		Non, mais vous oubliez, ou vous ne savez pas &
+		Dans quel temps l'inconstance est pour nous l\'{e}gitime.
+	\&
+	\stanza\setline{72}
+		Le coeur change \`{a} son gr\'{e} dans cet heureux s\'{e}jour; &
+		Parmi nos amants, c'est l'usage &
+		De ne pas contraindre l'amour; &
+		Mais d\`{e}s que l'hymen nous engage, &
+		Le coeur ne change plus dans cet heureux s\'{e}jour.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{70}
+	\stanza
+		No, but you forget, or you don't know &
+		The times when we find inconstancy proper.
+	\&
+	\stanza\setline{72}
+		The heart varies at will in this happy place. &
+		Among our lovers is the custom &
+		Of not constraining love; &
+		However, as soon as marriage commits us, &
+		The heart no longer varies in this happy place.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Alvar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{77}
+	\stanza
+		\stage{montrant Damon} &
+		L'habitant des bords de la Seine &
+		N'est jamais moins arr\^{e}t\'{e} &
+		Que lorsque l'hymen l'encha\^{i}ne; &
+		Il se fait un gonneur de sa l\'{e}g\`{e}ret\'{e}; &
+		Et pour l'\'{e}pouse la plus belle &
+		Il rougirait d'\^{e}tre fid\`{e}le.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{77}
+	\stanza
+		\stage{pointing to Damon} &
+		The Parisian who lives on the banks of the Seine &
+		Is never held captive less &
+		Than when nuptials bind. &
+		He celebrates it for its lightness, &
+		And for the most beautiful bride &
+		He would be embarrassed to be faithful.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Damon}
+\begin{pairs}
+\begin{Leftside}
+	\setline{84}
+	\stanza
+		\stage{montrant Alvar} &
+		Les \'{e}poux les plus soup\c{c}onneux &
+		Du Tage habitent les rives, &
+		L\`{a}, mille beaut\'{e}s plaitives &
+		Re\c{c}oivent de l'hymen des fers et non des noeuds; &
+		Vous ne voyez jamais autour de ces captives &
+		Voltiger les Ris et les Jeux. &
+		Belle Zima, craignez un si triste esclavage!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{84}
+	\stanza
+		\stage{pointing to Alvar} &
+		The most suspicious husbands &
+		Live on the banks of the Tagus. &
+		There, a thousand mournful beauties &
+		Receive shackles rather than knots from marriage; &
+		You never see around these captives &
+		The flutter of laughter or of games. &
+		Lovely Zima, beware what would be such sad slavery!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Alvar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{92}
+	\stanza
+		\stage{\`{a} Zima} &
+		C\'{e}dez, c\'{e}dez enfin \`{a} mes soins empress\'{e}s!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{92}
+	\stanza
+		\stage{to Zima} &
+		Give in at last to my eager attention!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Zima}
+\begin{pairs}
+\begin{Leftside}
+	\setline{94}
+	\stanza
+		Je ne veux d'un \'{e}poux ni jaloux ni volage.&
+		\stage{\`{a} l'espagnol} &
+		Vous aimez trop, &
+		\stage{au fran\c{c}ais} &
+		Et vous, vous n'aimez pas assez.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{94}
+	\stanza
+		I don't want a husband to be either jealous or fickle.&
+		\stage{to the Spaniard} &
+		You love too much, &
+		\stage{to the Frenchman} &
+		And you, you don't love enough.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Alvar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{99}
+	\stanza
+		Que vois-je?
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{99}
+	\stanza
+		What do I see?
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\subsection*{\textsc{Sc\`{e}ne 4}}
+\addcontentsline{toc}{subsection}{Sc\`{e}ne 4}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{100}
+	\stanza
+		\scene{Zima, Damon, Alvar, Adario} &
+		\scene{Adario sortant avec vivacit\'{e} de la for\^{e}t, Zima, charm\'{e}e de son transport, lui pr\'{e}sente la main.}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{100}
+	\stanza
+		\scene{Zima, Damon, Alvar, Adario}&
+		\scene{Adario leaves the forest eagerly, and Zima, delighted to see him come so, gives him her hand.}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Zima}
+\begin{pairs}
+\begin{Leftside}
+	\setline{102}
+	\stanza
+		C'est l'amant que mon coeur vous pr\'{e}f\`{e}re.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{102}
+	\stanza
+		It is the lover my heart prefers
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Alvar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{103}
+	\stanza
+		\stage{les apercevant}&
+		Osez-vous prononcer un arr\^{e}t si fatal!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{103}
+	\stanza
+		\stage{seeing them}&
+		Do you dare utter such a fatal judgment?
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Zima}
+\begin{pairs}
+\begin{Leftside}
+	\setline{105}
+	\stanza
+		Dans nos for\^{e}ts on est sinc\`{e}re.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{105}
+	\stanza
+		In our forest, we are sincere.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Alvar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{106}
+	\stanza
+		\stage{montrant Adario}&
+		Je saurai m'immoler un odieux rival.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{106}
+	\stanza
+		\stage{pointing to Adario}&
+		I would know to sacrifice myself for a disgusting rival
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Adario}
+\begin{pairs}
+\begin{Leftside}
+	\setline{108}
+	\stanza
+		\stage{fi\`{e}rement, \`{a} Alvar}&
+		Je craignais ton amour, je crains peu ta col\`{e}re.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{108}
+	\stanza
+		\stage{proudly, to Alvar}&
+		I feared your love, but I have little fear of your anger.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Alvar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{110}
+	\stanza
+		\stage{l'arr\^{e}tant}&
+		C'en est trop\ldots{}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{110}
+	\stanza
+		\stage{stopping}&
+		This is too much\ldots{}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Damon}
+\begin{pairs}
+\begin{Leftside}
+	\setline{112}
+	\stanza
+		\stage{arr\^{e}tant Alvar}&
+		Arr\^{e}tez\ldots{}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{112}
+	\stanza
+		\stage{stopping Alvar}&
+		Calm down\ldots{}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Alvar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{114}
+	\stanza
+		\stage{surpris}&
+		Damon, y pensez-vous? &
+		Quoi, c'est vous que prenez contre moi sa d\'{e}fense?
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{114}
+	\stanza
+		\stage{surprised}&
+		Damon, what are you thinking? &
+		You're taking his side against me?
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Damon}
+\begin{pairs}
+\begin{Leftside}
+	\setline{117}
+	\stanza
+		\stage{\`{a} Alvar}&
+		J'ai trop prot\'{e}g\'{e} l'inconstance &
+		Pour ne pas m'opposer \`{a} l'injuste courroux &
+		Qui vous est inspir\'{e} par la pers\'{e}v\'{e}rance.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{117}
+	\stanza
+		\stage{to Alvar}&
+		I have too long protected inconstancy &
+		Not to oppose the unjust wrath &
+		Inspired by your perseverance.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{121}
+	\stanza
+		\stage{On entend un pr\'{e}lude qui annonce la f\^{e}te.}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{121}
+	\stanza
+		\stage{We hear a prelude announcing the festival.}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Damon}
+\begin{pairs}
+\begin{Leftside}
+	\setline{122}
+	\stanza
+		D\'{e}j\`{a}, dans les bois d'alentour, &
+		J'entends de nos guerriers les bruyantes trompettes. &
+		Leur sons n'effrayent plus ces aimables retraites; &
+		Des charmes de la paix ils marquent le retour. &
+		\stage{\`{a} Alvar}&
+		\`A vos tristes regrets d\'{e}robez ce beau jour! &
+		Que le plaisir avec nous vous arr\^{e}te!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{122}
+	\stanza
+		Already, in the surrounding woods, &
+		I hear our warriors' loud trumpets. &
+		Their sounds no longer frighten these likable havens; &
+		They mark the return of the charms of peace. &
+		\stage{to Alvar} &
+		Take your sad regrets from this beautiful day! &
+		May pleasure keep you with us!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Alvar}
+\begin{pairs}
+\begin{Leftside}
+	\setline{129}
+	\stanza
+		\stage{s'\'{e}loignant}&
+		H\'{e}las! Je vais chercher un malheureux amour.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{129}
+	\stanza
+		\stage{moving away}&
+		Alas! I will seek an unhappy love
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Damon}
+\begin{pairs}
+\begin{Leftside}
+	\setline{131}
+	\stanza
+		\stage{le suivant}&
+		Venez plutôt l'amuser \`{a} la f\^{e}te!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{131}
+	\stanza
+		\stage{following him}&
+		Come entertain it at the festival instead!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+
+\subsection*{\textsc{Sc\`{e}ne 5}}
+\addcontentsline{toc}{subsection}{Sc\`{e}ne 5}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{133}
+	\stanza
+		\scene{Adario, Zima}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{133}
+	\stanza
+		\scene{Adario, Zima}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Adario}
+\begin{pairs}
+\begin{Leftside}
+	\setline{134}
+	\stanza
+		Je ne vous peindrai point les transports de mon coeur, &
+		Belle Zima, jugez-en par le v\^{o}tre! &
+		En comblant mon bonheur &
+		Vous montrez qu'une \'{e}gale ardeur &
+		Nous enflamme l'un et l'autre.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{134}
+	\stanza
+		I could not paint for you the flights of my heart, &
+		Beautiful Zima, see for yourself! &
+		By filling my happiness, &
+		You show that an equal passion &
+		Inflames both of us, each one and the other.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Zima}
+\begin{pairs}
+\begin{Leftside}
+	\setline{139}
+	\stanza
+		De l'amour le plus tendre \'{e}prouvez la douceur! &
+		Je vous dois la pr\'{e}f\'{e}rence. &
+		De vous \`{a} vos rivaux je vois la diff\'{e}rence: &
+		L'un s'abandonne \`{a} la fureur, &
+		Et l'autre perd mon coeur avec indiff\'{e}rence. &
+		Nous ignorons ce calme et cette violence.
+	\&
+	\stanza\setline{145}
+		Sur nos bords l'amour vole et pr\'{e}vient nos d\'{e}sirs. &
+		Dans notre paisible retraite &
+		On n'entend murmurer que l'onde et les z\'{e}phirs; &
+		Jamais l'\'{e}cho n'y r\'{e}p\`{e}te &
+		De regrets ni de soupirs.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{139}
+	\stanza
+		Experience the sweetness of the most tender love! &
+		You are my preferred choice. &
+		Between you and your rivals I see the difference: &
+		The one loses himself to passionate fury, &
+		And the other loses my heart with indifference. &
+		We know neither this calm nor that violence.
+	\&
+	\stanza\setline{145}
+		On our shores, Cupid flies and anticipates our desires. &
+		In our quiet refuge &
+		We hear nothing but the wave and winds whispering; &
+		Never there does the echo repeat &
+		From regrets or from sighs.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Adario}
+\begin{pairs}
+\begin{Leftside}
+	\setline{150}
+	\stanza
+		Viens, hymen, h\^{a}te-toi, suis l'amour qui t'appelle.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{150}
+	\stanza
+		Come, Hymen, haste! Follow love, which calls to you.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+% \newpage
+
+\dialogue{Zima, Adario}
+\begin{pairs}
+\begin{Leftside}
+	\setline{151}
+	\stanza
+		Hymen, viens nous unir d'une cha\^{i}ne \'{e}ternelle! &
+		Viens encore de la paix embellir les beaux jours! &
+		Viens! Je te promets d'\^{e}tre fid\`{e}le. &
+		Tu sais nous encha\^{i}ner et nous plaire toujours. &
+		Viens! Je te promets d'\^{e}tre fid\`{e}le.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{151}
+	\stanza
+		Hymen, come unite us in an eternal chain! &
+		Come again to embellish these beautiful days with peace! &
+		Come! I promise to be faithful to you. &
+		You know how to bind us and to please us forever. &
+		Come! I promise to be faithful to you.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\subsection*{\textsc{Sc\`{e}ne 6}}
+\addcontentsline{toc}{subsection}{Sc\`{e}ne 6}
+
+\begin{pairs}
+\begin{Leftside}
+	\setline{156}
+	\stanza
+		\scene{Zima, Adario, Fran\c{c}aises en habits d'amazones, guerriers fran\c{c}ais et sauvages, sauvagesses, bergers de la colonie.}
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{156}
+	\stanza
+		\scene{Zima, Adario, Frenchmen in Amazonian clothing, French and native warriors, native women, shepherds from the colony.}
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Adario}
+\begin{pairs}
+\begin{Leftside}
+	\setline{157}
+	\stanza
+		Bannissons les tristes alarmes! &
+		Nos vainqueurs nous rendent la paix. &
+		Partageons leurs plaisirs, ne craignons plus leurs armes! &
+		Sur nos tranquilles bords qu'Amour seul \`{a} jamais &
+		Fasse briller ses feux, vienne lancer ses traits!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{157}
+	\stanza
+		Let us banish sad alarms! &
+		Our conquerors bring us peace. &
+		Let us share their pleasures, no longer fearing their weapons! &
+		On our tranquil banks, may Cupid forever &
+		Make bright his light and throw his darts!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Choeur des Sauvages}
+\begin{pairs}
+\begin{Leftside}
+	\setline{162}
+	\stanza
+		Bannissons les tristes alarmes! &
+		Nos vainqueurs nous rendent la paix. &
+		Partageons leurs plaisirs, ne craignons plus leurs armes! &
+		Sur nos tranquilles bords qu'Amour seul \`{a} jamais &
+		Fasse briller ses feux, vienne lancer ses traits!
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{162}
+	\stanza
+		Let us banish sad alarms! &
+		Our conquerors bring us peace. &
+		Let us share their pleasures, no longer fearing their weapons! &
+		On our tranquil banks, may Cupid forever &
+		Make bright his light and throw his darts!
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\balletnum{danseducalumet}{Danse du Grand Calumet de la Paix, ex\'{e}cut\'{e}e par les Sauvages}{Dance of the Great Pipe of Peace, performed by the natives}
+
+\song{Rondeau}
+
+
+\dialogue{Zima, Adario}
+\begin{pairs}
+\begin{Leftside}
+	\setline{167}
+	\stanza
+		For\^{e}ts paisibles, &
+		Jamais un vain d\'{e}sir ne trouble ici nos coeurs. &
+		S'ils sont sensibles, &
+		Fortune, ce n'est pas au prix de tes faveurs.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{167}
+	\stanza
+		Peaceful forest, &
+		Never does a foolish desire trouble our hearts here. &
+		If they are sensitive, &
+		Fortune, it isn't at the expense of your favors.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Choeur des Sauvages}
+\begin{pairs}
+\begin{Leftside}
+	\setline{171}
+	\stanza
+		For\^{e}ts paisibles, &
+		Jamais un vain d\'{e}sir ne trouble ici nos coeurs. &
+		S'ils sont sensibles, &
+		Fortune, ce n'est pas au prix de tes faveurs.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{171}
+	\stanza
+		Peaceful forest, &
+		Never does a foolish desire trouble our hearts here. &
+		If they are sensitive, &
+		Fortune, it isn't at the expense of your favors.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\dialogue{Zima, Adario}
+\begin{pairs}
+\begin{Leftside}
+	\setline{175}
+	\stanza
+		Dans nos retraites, &
+		Grandeur, ne viens jamais &
+		Offrir tes faux attraits! &
+		Ciel, tu les as faites &
+		Pour l'innocence et pour la paix. &
+		Jouissons dans nos asiles, &
+		Jouissons des biens tranquilles! &
+		Ah! peut-on \^{e}tre heureux, &
+		Quand on forme d'autres voeux?
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{175}
+	\stanza
+		In our refuge, &
+		Grandeur, never come &
+		To offer your false charms! &
+		Heaven, you have made this place &
+		For innocence and for peace. &
+		Let us revel in our sanctuaries, &
+		Let us revel in the tranquility! &
+		Ah! Can we be happy, &
+		When we satisfy other desires?
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\balletnum{premmen}{1$^{er}$ Menuet pour les Guerriers et les Amazones}{First minuet for the warriors and the Amazons}
+
+\song{2$^{e}$ Menuet}
+
+\song{Pr\'{e}lude}
+
+\dialogue{Zima}
+\begin{pairs}
+\begin{Leftside}
+	\setline{184}
+	\stanza
+		R\'{e}gnez, plaisirs et jeux! Triomphez dans nos bois! &
+		Nous n'y connaissons que vos lois. &
+		Tout ce qui blesse &
+		La tendresse &
+		Est ignor\'{e} dans nos ardeurs. &
+		La nature qui fit nos coeurs &
+		Prend soin de les guider sans cesse.
+    \& 
+    \endnumbering
+\end{Leftside}
+\begin{Rightside}
+	\setline{184}
+	\stanza
+		Reign, pleasures and games! You shall triumph in our woods! &
+		We are familiar with nothing but your laws. &
+		All that hurts &
+		Tenderness &
+		Is ignored in our passions. &
+		Nature, who made our hearts, &
+		Takes care to guide them without end.
+    \& 
+    \endnumbering
+\end{Rightside} 
+\Columns 
+\end{pairs}
+
+\song{Chaconne}
+
+\newpage
+\begingroup
+\parindent 0pt
+\parskip 2ex
+\def\enotesize{\normalsize}
+\theendnotes
+\endgroup
+
+
+\end{document}
