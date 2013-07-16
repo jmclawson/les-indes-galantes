@@ -1,5 +1,4 @@
 \documentclass{article}
-\usepackage{xltxtra}
 \usepackage{eledmac,eledpar}
     \maxchunks{100}
     \def\endstanzaextra{\pstart\strut\skipnumbering\pend}
@@ -20,48 +19,43 @@ pdfcreator={translated and typeset by James M. Clawson},
 pdfsubject={Non-western love, represented by 18th-century French understandings.},%
 pdfkeywords={{noble savage}, love, french, world, opera}}
 
-% To use nice (but not-free) fonts
-\usepackage{fontspec} 
-\usepackage{xunicode}
-\defaultfontfeatures{Scale=MatchLowercase ,Mapping=tex-text}
-\setromanfont[Numbers=OldStyle]{Adobe Garamond Pro}
-\setsansfont{Futura Medium Italic}
-\setmonofont{Futura Condensed Medium}
+% Comment out the next five lines to avoid using XeLaTeX, or keep them in to use nice (but not-free) fonts. 
+\usepackage{xltxtra,fontspec,xunicode}
+    \defaultfontfeatures{Scale=MatchLowercase ,Mapping=tex-text}
+    \setromanfont[Numbers=OldStyle]{Adobe Garamond Pro}
+    \setsansfont{Futura Medium Italic}
+    \setmonofont{Futura Condensed Medium}
 
 \usepackage{fancyhdr}
 
+\newcommand{\accentcolr}{\color{WildStrawberry}}
+\chapterfont{\accentcolr}
+\allsectionsfont{\accentcolr\sffamily}
+\renewcommand{\numlabfont}{\accentcolr\sffamily\scriptsize}
+\newcommand{\spotcolr}[1]{{\accentcolr#1}}
 
-\chapterfont{\color{WildStrawberry}}
-\allsectionsfont{\color{WildStrawberry}\sffamily}
+\newcommand{\secheadr}[1]{\rhead{\parbox{\marginparwidth}{\sffamily\spotcolr{#1}}}\thispagestyle{plain}}
 
 \newcommand{\dialogue}[1]{%
-\filbreak\begin{center}
-	\textbf{\textsc{#1}}
-\end{center}\nopagebreak}
+    \filbreak\begin{center}
+	    \textbf{\textsc{#1}}
+    \end{center}\nopagebreak}
 
 \newcommand{\song}[1]{%
-\begin{center}
-	\textbf{\textit{(#1)}}
-\end{center}}
+    \begin{center}
+	    \textbf{\textit{(#1)}}
+    \end{center}}
 
 \newcommand{\songfoot}[2]{%
-\begin{center}
-	\textbf{\textit{(#1)\footnote{#2}}}
-\end{center}}
+    \begin{center}
+	    \textbf{\textit{(#1)\footnote{#2}}}
+    \end{center}}
 
 \newcommand{\stage}[1]{\hfill\emph{(#1)}\hfill}
-% \newcommand{\scene}[1]{\hfill\emph{#1}\hfill}
 \newcommand{\stagel}[1]{\emph{(#1)}}
 \newcommand{\stager}[1]{\hfill\emph{(#1)}}
 \newcommand{\scenel}[1]{\emph{#1}\hfill}
 \newcommand{\scene}[1]{\emph{#1}\hfill}
-
-\renewcommand{\numlabfont}{\color{WildStrawberry}\sffamily\scriptsize}
-% \renewcommand{\numlabfont}{\color{WildStrawberry}\normalfont\scriptsize}
-
-\newcommand{\spotcolr}[1]{{\color{WildStrawberry}#1}}
-
-% \newcommand{\mynote}[3]{\label{#1}\addtoendnotes{\hyperref[#1]{\spotcolr{line #2}} #3\newline}}
 
 \makeatletter
  \newcommand{\nop}[1]{\Hy@raisedlink{\hypertarget{#1}{}}}
@@ -73,103 +67,36 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \newcommand{\myballetnote}[3]{\addtoendnotes{\protect\hyperlink{#1}{\spotcolr{#2}}: #3\newline}}
 \newcommand{\balletnum}[3]{\song{#2}\mytarget{#1}\myballetnote{#1}{#2}{#3}}
 
-
 \title{Les indes galantes \\ (The Gallant Indies)}
 \author{Music by Jean-Philippe Rameau \\ Libretto by Louis Fuzelier \\ \url{http://github.com/jmclawson/les-indes-galantes}}
 \date{1735}
 
 \pagestyle{fancy}
-\renewcommand{\sectionmark}[1]{\rhead{\spotcolr{#1}}{}}
-% \rhead{\bfseries Les indes galantes}
+\renewcommand{\sectionmark}[1]{\lhead{\spotcolr{#1}}{}}
 \renewcommand{\headrulewidth}{0pt}
-% \fancyheadoffset{\marginparsep+\marginparwidth}
 \addtolength{\headwidth}{\marginparsep}
-\addtolength{\headwidth}{\marginparsep}
-\addtolength{\headwidth}{\marginparsep}
-% \addtolength{\headwidth}{\marginparwidth}
+\addtolength{\headwidth}{\marginparwidth}
 
 \begin{document} 
 \maketitle{}
 
 \thispagestyle{plain}
 
-
 \setstanzaindents{1,0,0}
 \setcounter{stanzaindentsrepetition}{2}
 \setlength{\Lcolwidth}{0.46\textwidth} 
 \setlength{\Rcolwidth}{\Lcolwidth}
-% \renewcommand{\hangingsymbol}{[\,}
-% \setlength{\stanzaindentbase}{20pt}
 
-% \newcounter{mynextline}
-% \setcounter{mynextline}{9}
+\newcommand*{\stanzastart}{\firstlinenum{5}\linenumincrement{5}\beginnumbering}
 
-\newcommand*{\ssstart}{\firstlinenum{5}\linenumincrement{5}\beginnumbering}
-% \newcommand*{\ssstart}{\firstlinenum{1}\linenumincrement{1}\beginnumbering}
-% \newcommand*{\bsstart}{\firstlinenum{5}\linenumincrement{5}\beginnumbering}
+\renewcommand*{\Leftsidehook}{\selectlanguage{french}\stanzastart}
+\renewcommand*{\Rightsidehook}{\selectlanguage{english}\stanzastart}
 
-\renewcommand*{\Leftsidehook}{\selectlanguage{french}\ssstart}
-% \renewcommand*{\Leftsidehookend}{\endnumbering}
-% \renewcommand*{\Leftsidehookend}{\setcounter{mynextline}{\value{line}}\stepcounter{mynextline}}
-\renewcommand*{\Rightsidehook}{\selectlanguage{english}\ssstart}
-% \newcommand*{\Rightsidehookend}{\Leftsidehookend}
-
-% \makeatletter
-% \global\c@mynextline 9\relax
-% \renewcommand*{\@l@reg}{%
-%   \ifx\l@dchset@num\relax \else
-%     \advance\absline@num \@ne
-%     \set@line@action
-%     \let\l@dchset@num=\relax
-%     \advance\absline@num \m@ne
-%     \advance\line@num \m@ne
-%   \fi
-%   \advance\absline@num \@ne
-%          \ifx\next@page@num\relax \else
-%              \page@action
-%              \let\next@page@num=\relax
-%          \fi
-%          \ifx\sub@change\relax \else
-%             \ifnum\sub@change>\z@
-%                \sublines@true
-%             \else
-%                \sublines@false
-%             \fi
-%             \sub@action
-%             \let\sub@change=\relax
-%          \fi
-%          \ifcase\@lock
-%             \or
-%                \@lock \tw@
-%             \or \or
-%                \@lock \z@
-%          \fi
-%          \ifcase\sub@lock
-%             \or
-%                \sub@lock \tw@
-%             \or \or
-%                \sub@lock \z@
-%          \fi
-%          \ifsublines@
-%               \ifnum\sub@lock<\tw@
-%                 \advance\subline@num \@ne
-%               \fi
-%          \else
-%               \ifnum\@lock<\tw@
-%                 \advance\line@num \@ne \subline@num \z@
-% 				% \c@mynextline \absline@num\relax
-% 				\advance\c@mynextline \absline@num\relax
-%               \fi
-%          \fi}
-% \makeatother
-
-
-\section*{Prologue}\rhead{\spotcolr{Prologue}}\thispagestyle{plain}
+\section*{Prologue}\secheadr{Prologue}
 \addcontentsline{toc}{section}{Prologue}
-\addtoendnotes{\protect\addcontentsline{toc}{section}{Notes}\protect\rhead{\spotcolr{Notes}}\protect\lhead{}\protect\thispagestyle{plain}}
+\addtoendnotes{\protect\addcontentsline{toc}{section}{Notes}\protect\secheadr{Notes}\protect\lhead{}\protect\thispagestyle{plain}}
 \addtoendnotes{\protect\subsection*{Prologue}}
 \addtoendnotes{\protect\addcontentsline{toc}{subsection}{Prologue}}
-
 
 \begin{pairs}
 \begin{Leftside}
@@ -177,7 +104,6 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 	\stanza
 		\scene{Le th\'{e}\^{a}tre repr\'{e}sente le palais d'H\'{e}b\'{e} dans le fond, et ses jardins dans les ailes.}
     \& 
-    % \setcounter{mynextline}{\value{line}}
 	\endnumbering
 \end{Leftside}
 \begin{Rightside}
@@ -185,7 +111,7 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 	\stanza
 		\scene{The stage depicts the palace of Hebe\mynote{hebe}{1}{Hebe is the Greek goddess of youthfulness.} in the background and her gardens in the foreground.}
     \& 
-    \endnumbering%\endnotetext[1]{Hebe is the Greek goddess of youthfulness.}
+    \endnumbering
 \end{Rightside} 
 \Columns 
 \end{pairs}
@@ -201,7 +127,6 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 	\stanza
 		\scene{H\'{e}b\'{e}}
     \& 
-    % \setcounter{mynextline}{\value{line}}
 	\endnumbering
 \end{Leftside}
 \begin{Rightside}
@@ -227,7 +152,6 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 		Les jeux brillants de Terpsichore; &
 		Les doux instants que vous donne l'Amour &
 		Vous sont plus chers encore.
-    % \setcounter{mynextline}{\value{line}}
 	\& 
     \endnumbering
 \end{Leftside}
@@ -254,15 +178,13 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \begin{pairs}
 \begin{Leftside}
 	\setline{11}
-	% \setline{\value{mynextline}}
 	\stanza
-		\scene{\textsc{Entr\'{e}e des 4 nations}. Troupe de jeunesse fran\c{c}aise, espagnole, italienne et polonaise, qui accourt et forme des danses gracieuses.}%\arabic{linenum}
+		\scene{\textsc{Entr\'{e}e des 4 nations}. Troupe de jeunesse fran\c{c}aise, espagnole, italienne et polonaise, qui accourt et forme des danses gracieuses.}
     \& 
     \endnumbering
 \end{Leftside}
 \begin{Rightside}
 	\setline{11}
-	% \setline{\value{mynextline}}
 	\stanza
 		\scene{\textsc{Entry of the four nations}. Troop of French, Spanish, Italian, and Polish youth. They run to create graceful dances.}
     \& 
@@ -271,12 +193,9 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \Columns 
 \end{pairs}
 
-% \newpage
-
 \dialogue{H\'{e}b\'{e}}
 \begin{pairs}
 \begin{Leftside}
-	% \setline{\value{mynextline}}
 	\setline{12}
 	\stanza
 		Amants s\^{u}rs de plaire, &
@@ -290,7 +209,6 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
     \endnumbering
 \end{Leftside}
 \begin{Rightside}
-	% \setline{\value{mynextline}}
 	\setline{12}
 	\stanza
 		Lovers sure of pleasing, &
@@ -298,8 +216,8 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 		Sing your happiness, &
 		But without disturbing the mysterious! &
 		For the tenderhearted, &
-		There are things made sweeter by secrecy. &
-		Consider that which is best left unsaid!
+		There are things made sweeter by subtlety. &
+		Remember what is best left unsaid!
     \& 
     \endnumbering
 \end{Rightside} 
@@ -758,7 +676,7 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 
 \newpage
 
-\section*{Act 2. Les Incas du P\'{e}rou (The Incas of Peru)}\rhead{\spotcolr{Act 2}}\thispagestyle{plain}
+\section*{Act 2. Les Incas du P\'{e}rou (The Incas of Peru)}\secheadr{Act 2}
 \addcontentsline{toc}{section}{Act 2. Les Incas du P\'{e}rou}
 \addtoendnotes{\protect\subsection*{Act 2.}}
 \addtoendnotes{\protect\addcontentsline{toc}{subsection}{Act 2.}}
@@ -853,8 +771,6 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \end{Rightside} 
 \Columns 
 \end{pairs}
-
-% \newpage
 
 \dialogue{Carlos}
 \begin{pairs}
@@ -1025,8 +941,6 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \end{Rightside} 
 \Columns 
 \end{pairs}
-
-% \newpage
 
 \dialogue{Carlos}
 \begin{pairs}
@@ -1307,7 +1221,6 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \Columns 
 \end{pairs}
 
-
 \dialogue{Huascar}
 \begin{pairs}
 \begin{Leftside}
@@ -1349,8 +1262,6 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \end{Rightside} 
 \Columns 
 \end{pairs}
-
-% \newpage
 
 \dialogue{Huascar}
 \begin{pairs}
@@ -1940,8 +1851,6 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \Columns 
 \end{pairs}
 
-% \newpage
-
 \subsection*{\textsc{Sc\`{e}ne 7}}
 \addcontentsline{toc}{subsection}{Sc\`{e}ne 7}
 
@@ -2281,7 +2190,7 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 
 \newpage
 
-\section*{Act 4.~Les sauvages (The American Indians)}\rhead{\spotcolr{Act 4}}\thispagestyle{plain}
+\section*{Act 4.~Les sauvages (The American Indians)}\secheadr{Act 4}
 \addcontentsline{toc}{section}{Act 4.~Les sauvages}
 \addtoendnotes{\protect\subsection*{Act 4.}}
 \addtoendnotes{\protect\addcontentsline{toc}{subsection}{Act 4.}}
@@ -3151,7 +3060,6 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \Columns 
 \end{pairs}
 
-
 \subsection*{\textsc{Sc\`{e}ne 5}}
 \addcontentsline{toc}{subsection}{Sc\`{e}ne 5}
 
@@ -3262,8 +3170,6 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \Columns 
 \end{pairs}
 
-% \newpage
-
 \dialogue{Zima, Adario}
 \begin{pairs}
 \begin{Leftside}
@@ -3369,7 +3275,6 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \balletnum{danseducalumet}{Danse du Grand Calumet de la Paix, ex\'{e}cut\'{e}e par les Sauvages}{Dance of the Great Pipe of Peace, performed by the natives}
 
 \song{Rondeau}
-
 
 \dialogue{Zima, Adario}
 \begin{pairs}
@@ -3502,6 +3407,5 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \def\enotesize{\normalsize}
 \theendnotes
 \endgroup
-
 
 \end{document}
