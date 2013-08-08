@@ -6,7 +6,7 @@
 \usepackage{fullpage}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{sectsty}
-\usepackage[french,english]{babel}
+\usepackage[french,english,american]{babel}
 \usepackage{endnotes}
 \usepackage{hyperref}
 \hypersetup{%
@@ -35,7 +35,7 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \renewcommand{\numlabfont}{\accentcolr\sffamily\scriptsize}
 \newcommand{\spotcolr}[1]{{\accentcolr#1}}
 
-\newcommand{\secheadr}[1]{\rhead{\parbox{\marginparwidth}{\sffamily\spotcolr{#1}}}\thispagestyle{plain}}
+\newcommand{\secheadr}[1]{\rhead{\parbox{\marginparwidth}{\sffamily\spotcolr{#1}}}\cfoot{\thepage\hspace{\marginparwidth}\hspace{\marginparsep}}\thispagestyle{plain}}
 
 \newcommand{\dialogue}[1]{%
     \filbreak\begin{center}
@@ -69,7 +69,7 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \newcommand{\balletnum}[3]{\song{#2}\mytarget{#1}\myballetnote{#1}{#2}{#3}}
 
 \title{Les indes galantes \\ (The Gallant Indies)}
-\author{Music by Jean-Philippe Rameau \\ Libretto by Louis Fuzelier \\ \url{http://github.com/jmclawson/les-indes-galantes}}
+\author{Music by Jean-Philippe Rameau \\ Libretto by Louis Fuzelier \\ Trans. by James Clawson \\ \url{http://github.com/jmclawson/les-indes-galantes}}
 \date{1735}
 
 \pagestyle{fancy}
@@ -77,6 +77,13 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \renewcommand{\headrulewidth}{0pt}
 \addtolength{\headwidth}{\marginparsep}
 \addtolength{\headwidth}{\marginparwidth}
+% \setlength{\footwidth}{\textwidth}
+
+\usepackage{csquotes} 
+\usepackage[style=mla]{biblatex}
+\addbibresource{masterbib.bib}
+
+\urlstyle{tt}
 
 \begin{document} 
 \maketitle{}
@@ -110,7 +117,7 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \begin{Rightside}
 	\setline{1}
 	\stanza
-		\scene{The stage depicts the palace of Hebe\mynote{hebe}{1}{Hebe is the Greek goddess of youthfulness.} in the background and her gardens in the foreground.}
+		\scene{The stage depicts the palace of Hebe\mynote{hebe}{1}{Hebe is the Greek personification of youth and goddess of youthfulness \autocite[361]{hebe:Smith:1867aa}.} in the background and her gardens in the foreground.}
     \& 
     \endnumbering
 \end{Rightside} 
@@ -164,8 +171,8 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 		You sing as soon as dawn &
 		Brightens this beautiful abode: &
 		At daybreak you begin&
-		The brilliant games of Terpsichore;\mynote{terpsichore}{8}{One of the nine muses, Terpsichore is responsible for dance and choral singing.} &
-		The sweet moments that Cupid\mynote{cupid}{9}{The name used in the original French, ``L'Amour,'' is ambiguous. Literally, his name means ``Love,'' so he is a personification of the idea, but he later appears accompanied ``d'une troupe d'Amours'' `by a troup of loves,' and they are all armed with darts, or arrows. The closest English approximation to this god, then, is \emph{Cupid}, the Roman equivalent of the Greek \emph{Eros}, more typically known in French as \emph{Cupidon} and \emph{\'{E}ros}, respectively. Cupid is commonly accompanied by \emph{amorini} or ``cupids,'' depicted as chubby winged babies called \emph{putti}. Fuzelier's choice of naming him L'Amour over the more expected Cupidon is a choice that narrows the distance between the individual and what he represents.} gives you &
+		The brilliant games of Terpsichore;\mynote{terpsichore}{8}{One of the nine muses, Terpsichore is responsible for dance and choral singing \autocite[1005]{terpsichora:Smith:1867aa}.} &
+		The sweet moments that Cupid\mynote{cupid}{9}{The name used in the original French, ``L'Amour,'' is ambiguous. Literally, his name means ``Love,'' so he is a personification of the idea, but he later appears accompanied ``d'une troupe d'Amours'' `by a troup of loves,' and they are all armed with darts, or arrows. The closest common English approximation to this god of love, then, is \emph{Cupid}, the Roman equivalent of the Greek \emph{Eros}, more typically known in French as \emph{Cupidon} and \emph{\'{E}ros}, respectively. Cupid is often loosely interchanged with the Erotes, a plurality of Cupidines or ``cupids,'' similarly depicted as winged youths \autocite[50]{eros:Smith:1867aa}. Fuzelier's choice of naming him \emph{L'Amour} over the equally acceptable \emph{Cupidon} is a choice that, in the original, narrows the distance between the individual and what he represents.} gives you &
 		Are dearer still to you.
     \& 
     \endnumbering
@@ -225,9 +232,9 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \Columns 
 \end{pairs}
 
-\balletnum{airgrave}{Air grave pour deux polonais}{Serious air for two Polish youths}
+\balletnum{airgrave}{Air grave pour deux polonais}{Serious air for two Polish youths: \emph{Grove's Dictionary of Music and Musicians} defines ``air'' as ``music which is independent of harmony'' \autocite[57]{air:Grove:1904aa}. In short, airs are musical works intended for individuals rather than ensembles. An air usually has harmonic elements provided by other voices or instruments, but the melody is presented with far greater importance than it otherwise would in a homophonic setting.}
 
-\balletnum{firstmin}{1$^{\textrm{er}}$ Menuet}{First minuet}
+\balletnum{firstmin}{1$^{\textrm{er}}$ Menuet}{First minuet: A ``minuet'' is music set to accompany a French dance, named from the word for ``small,'' and meant to describe the ``short steps of the dance.'' As a minuet was often a short piece of music, it became customary to follow one minuet with a second \autocite[213]{minuet:Grove:1904aa}---as seen here in Rameau.}
 
 \balletnum{secmin}{2$^{\textrm{e}}$ Menuet}{Second minuet}
 
@@ -285,7 +292,7 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \Columns 
 \end{pairs}
 
-\song{Musette en rondeau}
+\balletnum{musenrond}{Musette en rondeau}{A ``musette'' is three things in one: it is the French word for a bagpipe, the enjoyment of which became widespread under the reign of Louis XIV (1643--1715); it is a word describing an associated air well-suited to the bagpipe; and it is the word for these airs' accompanying dances, which grew in popularity under Louis XIV and Louis XV (1715--1774) \autocite[323]{musette:Grove:1904aa}. ``En rondeau'' here describes that this musette is composed as a ``round,'' a musical form in which the opening line repeats after the introduction of each new musical idea, the piece ending as it began to form a ``rounded'' work \autocite[135]{rondo:Grove:1904aa}. In \emph{Les Indes Galantes}, Rameau's opening line is eight measures long and voiced for bagpipe, oboe, bassoon, and first violins; accompaniament is provideded by second violins, violas, double bass, and harpsichord. While the melody repeats in different voicing throughout the piece, the musette ends with an exact repetition of these eight opening measures \autocite[24--25]{Rameau:1902aa}.}
 \begin{pairs}
 \begin{Leftside}
 	\setline{29}
@@ -319,8 +326,8 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 	\setline{30}
 	\stanza
 		What's that I hear? The drums silence our bagpipes? &
-		It's Bellona!\mynote{bellona}{31}{Bellona is a Roman goddess of war.} Her cries excite heroes: &
-		The thief will convert the followers of Paphos!\mynote{paphos}{32}{Paphos, on the island of Cyprus, is said to be the birthplace of---and was the center of worship for---Aphrodite, the Greek goddess of love.}
+		It's Bellona!\mynote{bellona}{31}{Bellona is a Roman goddess of war \autocite[481]{bellona:Smith:1867aa}.} Her cries excite heroes: &
+		The thief will convert the followers of Paphos!\mynote{paphos}{32}{Paphos, on the island of Cyprus, is a center of worship for Aphrodite, the Greek goddess of love \autocites[115]{paphia:Smith:1867aa}[228]{aphrodite:Smith:1867aa}.}
     \& 
     \endnumbering
 \end{Rightside} 
@@ -476,7 +483,7 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 		O you, victor of the Heavens, &
 		Come prove your supreme power! &
 		They dare leave you to follow other gods! &
-		Ah, Son of Venus!\mynote{venus}{55}{Cupid is the son of Venus, the Roman goddess of love whose Greek counterpart was Aphrodite.} Who better than you to avenge yourself?
+		Ah, Son of Venus!\mynote{venus}{55}{Cupid is the son of Venus, the Roman goddess of love whose Greek counterpart was Aphrodite \autocite[50]{eros:Smith:1867aa}.} Who better than you to avenge yourself?
     \& 
     \endnumbering
 \end{Rightside} 
@@ -538,9 +545,9 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \begin{Rightside}
 	\setline{58}
 	\stanza
-		Why did Mars\mynote{mars}{58}{Mars is the Roman god of war.} declare war against Cupid? &
+		Why did Mars\mynote{mars}{58}{Mars is a Roman god of war \autocite[961]{mars:Smith:1867aa}.} declare war against Cupid? &
 		Does Mars lose his incense when someone offers some to me? &
-		Never have the myrtles on earth\mynote{myrtleandlaurel}{60}{Myrtle is a white flower prized for its scent and symbolic link to purity; for these reasons it is sacred to Venus. Laurel, on the other hand, was shaped into wreaths to be worn by on the head by those who are victorious---in Rome, especially those military leaders returning home victorious from battle.} &
+		Never have the myrtles on earth\mynote{myrtleandlaurel}{60}{Myrtle is a plant sacred to Aphrodite and Venus, thus signifying love \autocite[228]{aphrodite:Smith:1867aa}. Laurel, on the other hand, is a tree signifying military victory \autocite[521]{fasces:Smith:1878aa}, and is thus associated here with Mars and Bellona.} &
 		Prevented the laurels from blooming.
     \& 
     \endnumbering
@@ -2144,7 +2151,7 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \begin{Rightside}
 	\setline{195}
 	\stanza
-		Fly, zephyrs,\mynote{zephyrs}{196}{The Greek god of the west wind, Zephyros (French \emph{Z\'{e}phyr}), took as a lover Chloris, a nymph whose Roman equivalent, Flora, is a goddess of flowers and springtime; their child was Karpos, whose name meant ``Fruit.'' The French original here imagines Zephyros as a plural entity, claiming that these many zephyroses are the ``tendres amants de Flore'' `tender lovers of Flora,' goddess of flowers and spring. Further, the west wind commonly stands for good luck. Here, Fuzelier joins many symbols together: the lucky west wind, the fruitful coupling of Zephyros and Flora, and the promise of spring all ought to conspire to bring Val\`{e}re and \'{E}milie home to France---the empire of the lilies commonly symbolized by the fleur-de-lys ({\symbolfont ⚜}) since at least the fourteenth century. The choice of pairing Greek Zephyros with the Roman Flora (rather than the Greek Chloris) further clarifies the pairing between the sailors' need for wind and their desire to return to the empire of lilies, just as the choice to pluralize ``Z\'{e}phyrs'' as many lovers of Flora further connects this wind god with the opera's frame narrative of the many cupids serving Cupid, whom Zephyros also served.} tender lovers of spring!&
+		Fly, zephyrs,\mynote{zephyrs}{196}{The Greek god of the west wind, Zephyrus---French \emph{Z\'{e}phyr}---took as a lover Chloris, whose Roman equivalent, Flora, is a goddess of flowers and springtime; their child was Carpus, whose name meant ``fruit'' \autocites[1321]{zephyrus:Smith:1867aa}[175]{flora:Smith:1867aa}. The French original here imagines Zephyros as a plural entity, claiming that these many zephyroses are the ``tendres amants de Flore'' `tender lovers of Flora,' goddess of flowers and spring. Further, the west wind commonly stands for good luck. Here, Fuzelier joins many symbols together: the lucky west wind, the fruitful coupling of Zephyros and Flora, and the promise of spring all ought to conspire to bring Val\`{e}re and \'{E}milie home to France---the empire of the lilies commonly symbolized by the fleur-de-lys ({\symbolfont ⚜}). The choice of pairing Greek Zephyros with the Roman Flora rather than the Greek Chloris further clarifies the pairing between the sailors' need for wind and their desire to return to the empire of lilies, just as the choice to pluralize ``Z\'{e}phyrs'' as many lovers of Flora further connects this wind god with the opera's frame narrative of the many cupids serving Cupid, whom Zephyros also served.} tender lovers of spring!&
 		If you guide us, all our wishes are fulfilled.&
 		Wealthy shores of the empire of lilies,&
 		Oh, we will see you again!
@@ -2193,7 +2200,7 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 	\setline{201}
 	\stanza
 	    Make haste to embark&
-		Young hearts, fly to Cythera!\mynote{cythera}{202}{Cythera, an island of Greece, lays claim to the birthplace of Aphrodite---as does the island of Cyprus. See the note accompanying line 32 in the Prologue.}&
+		Young hearts, fly to Cythera!\mynote{cythera}{202}{Cythera, an island of Greece, was the place of Aphrodite's first landfall after her birth \autocite[228]{aphrodite:Smith:1867aa}.}&
 		On this reckless fleet,&
 		One can never risk too much.
     \& 
@@ -2222,7 +2229,7 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 		You will find upon the water a rest as sweet&
 		As under the myrtles of Cythera.&
 		Do not fear the waves!&
-		They have given birth to your kind mother.\mynote{mother}{209}{Aphrodite, goddess of love and the mother of Cupid, was born on the waves of the sea when the severed genitals of Uranus were cast there.}
+		They have given birth to your kind mother.\mynote{mother}{209}{Aphrodite, goddess of love---and often the mother of Cupid \autocite[50]{eros:Smith:1867aa}---was born on the waves of the sea when the severed genitals of Uranus were cast there \autocite[228]{aphrodite:Smith:1867aa}.}
     \& 
     \endnumbering
 \end{Rightside} 
@@ -2260,7 +2267,7 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 		On the road as to the port!&
 		If, leaving the shore,&
 		Reason is shipwrecked&
-		On this fine day, Thetis\mynote{thetis}{217}{Thetis is a sea nymph.}&
+		On this fine day, Thetis\mynote{thetis}{217}{Thetis is one of the Nereides, sea nymphs of the Mediterranean who are granddaughters of Poseidon \autocites[1103]{thetis:Smith:1867aa}[1160]{nereis:Smith:1867aa}.}&
 		Serves none of them better than Cupid.
     \& 
     \endnumbering
@@ -2357,6 +2364,11 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \end{pairs}
 
 
+\vfill
+\begin{center}
+\includegraphics[width=.25\textwidth]{flourish2.png}
+\end{center}
+\vfill
 
 
 
@@ -3877,11 +3889,16 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 
 \newpage
 
-\section*{4$^{\textrm{\sffamily{e}}}$ Entr\'{e}e \\ Les sauvages (The American Indians)}\secheadr{Act 4}
+\section*{4$^{\textrm{\sffamily{e}}}$ Entr\'{e}e \\ Les sauvages (The Savages of America)}\secheadr{Act 4}
 \addcontentsline{toc}{section}{4. Les sauvages}
 \addtoendnotes{\protect\subsection*{Act 4}}
 \addtoendnotes{\protect\addcontentsline{toc}{subsection}{Act 4}}
-\addtoendnotes{Fuzelier added the fourth act in 1736, seven months after the opera's premiere.\newline}
+\addtoendnotes{\begingroup%
+\parindent 4ex%
+\parskip 0ex%
+Fuzelier added the fourth act in 1736, seven months after the opera's premiere. The French noun \emph{sauvage}, found in the title and elsewhere in the act, has an obvious cognate in the English \emph{savage}, a word once often used to describe the native peoples of many lands encroached by colonial interests. The French adjective carries more nuance than it does today in English---suggesting ``unspoiled'' or ``uncorrupted,'' among other things. But the noun form also refers specifically to the native peoples of America, in the same way English until recently employed the word ``Indian'' to that same effect. The editors of a later edition of the opera's score clarifies this parallel evolution of the linguistic concept in French as it has in English: The 1761 sketch for a costume worn by the actress who plays Phani in the second act is described as that of ``une sauvagesse,'' clarifying further for the contemporary reader, ``ou Indienne de l'Am\'{e}rique''---`a [female] savage, or [female] Indian of America' \autocite[viii]{avant-propos:Rameau:1902aa}. A reproduction of this sketch is included on page~\pageref{phaniimage} at the end of the fourth act \autocite[from][lxiii]{commentaire-bibliographique:Rameau:1902aa}.
+
+Apart from the title, where the context of these historical, linguistic resonances still ought to be felt, I've translated \emph{sauvage} primarily as ``native,'' except where the combination \emph{nation sauvage} would have rendered the awkward ``native nation.'' In these places, I have chosen the not-anachronistic alternative of ``Indian nation.'' \endgroup\newline}
 
 \begin{pairs}
 \begin{Leftside}
@@ -5086,6 +5103,17 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \end{pairs}
 
 \song{Chaconne}
+\label{phaniimage}
+\nocite{Fuzelier:1745fk}
+
+\vfill
+\begin{center}
+\includegraphics[width=.4\textwidth]{Phani.png}
+\end{center}
+\vfill
+
+
+
 
 \newpage
 \begingroup
@@ -5094,5 +5122,10 @@ pdfkeywords={{noble savage}, love, french, world, opera}}
 \def\enotesize{\normalsize}
 \theendnotes
 \endgroup
+
+\newpage
+\selectlanguage{american}
+\addcontentsline{toc}{section}{Works Cited}\secheadr{Works Cited}
+\printbibliography
 
 \end{document}
